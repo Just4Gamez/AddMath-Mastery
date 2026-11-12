@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery AddMath: Bab 1, Bab 2 & Bab 3 (KSSM Tingkatan 4)</title>
+    <title>Mastery AddMath: Bab 1, Bab 2, Bab 3 & Bab 4 (KSSM Tingkatan 4)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -58,14 +58,17 @@
 
             <!-- Pemilih Bab Utama -->
             <div class="flex flex-wrap items-center justify-center gap-2 bg-slate-800/90 p-1.5 rounded-2xl border border-slate-700/60 shadow-inner">
-                <button onclick="switchChapter('bab1')" id="btn-ch1" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">
+                <button onclick="switchChapter('bab1')" id="btn-ch1" class="ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">
                     <i class="fa-solid fa-book-open mr-1"></i> Bab 1: Fungsi
                 </button>
-                <button onclick="switchChapter('bab2')" id="btn-ch2" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                <button onclick="switchChapter('bab2')" id="btn-ch2" class="ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
                     <i class="fa-solid fa-square-root-variable mr-1"></i> Bab 2: Kuadratik
                 </button>
-                <button onclick="switchChapter('bab3')" id="btn-ch3" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                <button onclick="switchChapter('bab3')" id="btn-ch3" class="ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
                     <i class="fa-solid fa-cube mr-1"></i> Bab 3: Sistem Persamaan
+                </button>
+                <button onclick="switchChapter('bab4')" id="btn-ch4" class="ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                    <i class="fa-solid fa-calculator mr-1"></i> Bab 4: Indeks, Surd & Log
                 </button>
             </div>
         </div>
@@ -178,11 +181,11 @@
             <div id="bab2-content-diskriminan" class="tab-content space-y-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700 pb-4">
-                        <h3 class="text-xl font-bold text-white">Pembezalayan / Diskriminan ($b^2 - 4ac$)</h3>
+                        <h3 class="text-xl font-bold text-white">Pembezalayan / Diskriminan (b² - 4ac)</h3>
                         <div class="flex gap-2">
                             <button onclick="updateDisc('lebih')" id="d-btn-1" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-600 text-white">D > 0</button>
                             <button onclick="updateDisc('sama')" id="d-btn-2" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300">D = 0</button>
-                            <button onclick="updateDisc('kurang')" id="d-btn-3" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300">D < 0</button>
+                            <button onclick="updateDisc('kurang')" id="d-btn-3" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300">D &lt; 0</button>
                         </div>
                     </div>
                     <div id="disc-info" class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-2">
@@ -232,7 +235,6 @@
         <!-- MODUL BAB 3: SISTEM PERSAMAAN -->
         <!-- ========================================== -->
         <section id="chapter-bab3" class="view-section space-y-6">
-            <!-- Navigasi Subtopik Bab 3 -->
             <nav class="flex flex-wrap gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/80">
                 <button onclick="switchTab('bab3', 'dash')" id="bab3-btn-dash" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 3</button>
                 <button onclick="switchTab('bab3', 'tiga')" id="bab3-btn-tiga" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Sistem Linear (3 Pembolehubah)</button>
@@ -240,7 +242,6 @@
                 <button onclick="switchTab('bab3', 'kuiz')" id="bab3-btn-kuiz" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Bab 3</button>
             </nav>
 
-            <!-- Tab 3.1: Dashboard Bab 3 -->
             <div id="bab3-content-dash" class="tab-content active space-y-6">
                 <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                     <div class="max-w-2xl space-y-4">
@@ -252,7 +253,6 @@
                 </div>
             </div>
 
-            <!-- Tab 3.2: Sistem Linear 3 Pembolehubah -->
             <div id="bab3-content-tiga" class="tab-content space-y-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
                     <h3 class="text-xl font-bold text-white">Sistem Persamaan Linear dalam Tiga Pemboleh Ubah</h3>
@@ -274,7 +274,6 @@
                 </div>
             </div>
 
-            <!-- Tab 3.3: Persamaan Serentak Linear & Tak Linear -->
             <div id="bab3-content-serentak" class="tab-content space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
@@ -288,7 +287,6 @@
                 </div>
             </div>
 
-            <!-- Tab 3.4: Kuiz Dinamik Bab 3 -->
             <div id="bab3-content-kuiz" class="tab-content space-y-6">
                 <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center gap-4 shadow-xl">
                     <div>
@@ -311,6 +309,110 @@
             </div>
         </section>
 
+
+        <!-- ========================================== -->
+        <!-- MODUL BAB 4: INDEKS, SURD & LOGARITMA -->
+        <!-- ========================================== -->
+        <section id="chapter-bab4" class="view-section space-y-6">
+            <nav class="flex flex-wrap gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/80">
+                <button onclick="switchTab('bab4', 'dash')" id="bab4-btn-dash" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 4</button>
+                <button onclick="switchTab('bab4', 'indeks')" id="bab4-btn-indeks" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Hukum Indeks</button>
+                <button onclick="switchTab('bab4', 'surd')" id="bab4-btn-surd" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Surd & Konjugat</button>
+                <button onclick="switchTab('bab4', 'log')" id="bab4-btn-log" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Hukum Logaritma</button>
+                <button onclick="switchTab('bab4', 'kuiz')" id="bab4-btn-kuiz" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Bab 4</button>
+            </nav>
+
+            <!-- Tab 4.1: Dashboard Bab 4 -->
+            <div id="bab4-content-dash" class="tab-content active space-y-6">
+                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
+                    <div class="max-w-2xl space-y-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 4: <span class="text-purple-400">Indeks, Surd dan Logaritma</span></h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Kuasai hukum indeks, pemudahan ungkapan surd, merasionalkan penyebut, serta hukum logaritma dan penyelesaian persamaan logaritma/indeks.</p>
+                        <button onclick="switchTab('bab4', 'kuiz'); startQuizBab4();" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Mula Kuiz Bab 4</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4.2: Hukum Indeks -->
+            <div id="bab4-content-indeks" class="tab-content space-y-6">
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
+                    <h3 class="text-xl font-bold text-white">Rumus & Hukum Indeks Penting</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl space-y-1">
+                            <h4 class="font-bold text-purple-300 text-sm">Pendaraban & Pembahagian</h4>
+                            <p class="font-mono text-xs text-slate-300">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></p>
+                            <p class="font-mono text-xs text-slate-300">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m-n</sup></p>
+                            <p class="font-mono text-xs text-slate-300">(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl space-y-1">
+                            <h4 class="font-bold text-indigo-300 text-sm">Indeks Negatif & Sifar</h4>
+                            <p class="font-mono text-xs text-slate-300">a<sup>-n</sup> = 1 / a<sup>n</sup></p>
+                            <p class="font-mono text-xs text-slate-300">a<sup>0</sup> = 1 (dengan a ≠ 0)</p>
+                            <p class="font-mono text-xs text-slate-300">a<sup>1/n</sup> = ⁿ√a</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4.3: Surd & Konjugat -->
+            <div id="bab4-content-surd" class="tab-content space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Hukum Asas Surd</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed font-mono text-purple-300">√a × √b = √(ab)<br>√a ÷ √b = √(a / b)<br>m√a ± n√a = (m ± n)√a</p>
+                    </div>
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Merasionalkan Penyebut (Surd Konjugat)</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Untuk merasionalkan penyebut berbentuk <span class="font-mono text-purple-400">a ± √b</span>, darab pengangka dan penyebut dengan surd konjugatnya <span class="font-mono text-purple-400">a ∓ √b</span> menggunakan identiti <span class="font-mono text-purple-400">(a - √b)(a + √b) = a² - b</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4.4: Hukum Logaritma -->
+            <div id="bab4-content-log" class="tab-content space-y-6">
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
+                    <h3 class="text-xl font-bold text-white">Hukum Logaritma Utama</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-purple-300 text-sm">Hukum Pendaraban</h4>
+                            <p class="text-xs font-mono text-slate-300 mt-1">log<sub>a</sub>(xy) = log<sub>a</sub>x + log<sub>a</sub>y</p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-indigo-300 text-sm">Hukum Pembahagian</h4>
+                            <p class="text-xs font-mono text-slate-300 mt-1">log<sub>a</sub>(x/y) = log<sub>a</sub>x - log<sub>a</sub>y</p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-pink-300 text-sm">Hukum Kuasa & Pertukaran Asas</h4>
+                            <p class="text-xs font-mono text-slate-300 mt-1">log<sub>a</sub>(x<sup>n</sup>) = n log<sub>a</sub>x<br>log<sub>a</sub>b = log<sub>c</sub>b / log<sub>c</sub>a</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4.5: Kuiz Dinamik Bab 4 -->
+            <div id="bab4-content-kuiz" class="tab-content space-y-6">
+                <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center gap-4 shadow-xl">
+                    <div>
+                        <span id="q-label-bab4" class="text-xs font-semibold text-purple-300 uppercase">Soalan 1 dari 10 (Bab 4)</span>
+                        <h2 class="text-2xl font-bold text-white mt-1">Cabaran Kuiz Bab 4</h2>
+                    </div>
+                    <button onclick="startQuizBab4()" class="px-4 py-2 rounded-xl bg-white text-purple-900 hover:bg-purple-100 font-bold text-sm shadow-md">Soalan Baharu</button>
+                </div>
+                <div id="card-bab4" class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+                    <h3 id="question-bab4" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                    <div id="options-bab4" class="space-y-3"></div>
+                    <div id="feedback-bab4" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                    <button id="next-bab4" onclick="nextQuestionBab4()" class="hidden w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm shadow-lg">Soalan Seterusnya</button>
+                </div>
+                <div id="result-bab4" class="hidden bg-slate-800 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
+                    <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 4 Selesai!</h3>
+                    <p id="score-bab4" class="text-lg text-slate-300">Markah: 0 / 10</p>
+                    <button onclick="startQuizBab4()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm">Cuba Semula</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- JavaScript Logika & Kuiz Dinamik -->
@@ -318,14 +420,15 @@
         function switchChapter(chId) {
             document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.ch-btn').forEach(btn => {
-                btn.className = "ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50";
+                btn.className = "ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50";
             });
             document.getElementById('chapter-' + chId).classList.add('active');
             
             let activeBtnId = 'btn-ch1';
             if(chId === 'bab2') activeBtnId = 'btn-ch2';
             if(chId === 'bab3') activeBtnId = 'btn-ch3';
-            document.getElementById(activeBtnId).className = "ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
+            if(chId === 'bab4') activeBtnId = 'btn-ch4';
+            document.getElementById(activeBtnId).className = "ch-btn px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -340,6 +443,7 @@
             if(chapter === 'bab1' && tabName === 'kuiz' && quizSetBab1.length === 0) startQuizBab1();
             if(chapter === 'bab2' && tabName === 'kuiz' && quizSetBab2.length === 0) startQuizBab2();
             if(chapter === 'bab3' && tabName === 'kuiz' && quizSetBab3.length === 0) startQuizBab3();
+            if(chapter === 'bab4' && tabName === 'kuiz' && quizSetBab4.length === 0) startQuizBab4();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -408,9 +512,24 @@
             { q: "Kaedah penghapusan dalam sistem tiga pemboleh ubah melibatkan...", options: ["Menghapuskan satu pemboleh ubah secara berperingkat", "Menghapuskan semua pemboleh ubah serentak", "Menukar persamaan kepada bentuk kuadratik", "Mencari nilai diskriminan D"], answerText: "Menghapuskan satu pemboleh ubah secara berperingkat", explanation: "Langkah demi langkah mengurangkan kepada 2 pemboleh ubah, kemudian 1 pemboleh ubah." }
         ];
 
+        // Bank Soalan Bab 4 (Indeks, Surd & Logaritma)
+        const bankBab4 = [
+            { q: "Permudahkan 2²ⁿ × 2ᵐ ÷ 2ⁿ dalam bentuk asas 2.", options: ["2ⁿ⁺ᵐ", "2²ⁿ⁺ᵐ", "2ᵐ⁻ⁿ", "2²ⁿ⁻ᵐ"], answerText: "2ⁿ⁺ᵐ", explanation: "2²ⁿ × 2ᵐ ÷ 2ⁿ = 2²ⁿ⁺ᵐ⁻ⁿ = 2ⁿ⁺ᵐ." },
+            { q: "Selesaikan persamaan indeks: 3²ˣ = 81.", options: ["2", "4", "3", "1"], answerText: "2", explanation: "3²ˣ = 3⁴ -> 2x = 4 -> x = 2." },
+            { q: "Ungkapkan √72 dalam bentuk a√b dengan b paling kecil.", options: ["6√2", "3√8", "2√18", "9√2"], answerText: "6√2", explanation: "√72 = √(36 × 2) = 6√2." },
+            { q: "Rasionalkan penyebut bagi 6 / √3.", options: ["2√3", "3√2", "6√3", "√3"], answerText: "2√3", explanation: "(6 / √3) × (√3 / √3) = 6√3 / 3 = 2√3." },
+            { q: "Cari nilai log₂ 64.", options: ["6", "5", "8", "4"], answerText: "6", explanation: "2⁶ = 64, oleh itu log₂ 64 = 6." },
+            { q: "Permudahkan log₁₀ 50 + log₁₀ 2.", options: ["2", "log₁₀ 52", "100", "1"], answerText: "2", explanation: "log₁₀(50 × 2) = log₁₀ 100 = log₁₀ 10² = 2." },
+            { q: "Diberi log₃ x = 4, cari nilai x.", options: ["81", "12", "64", "27"], answerText: "81", explanation: "x = 3⁴ = 81." },
+            { q: "Apakah surd konjugat bagi (3 + √5)?", options: ["3 - √5", "-3 + √5", "-3 - √5", "√5 - 3"], answerText: "3 - √5", explanation: "Surd konjugat menukar tanda tengah daripada + kepada -." },
+            { q: "Nilaikan log₅ 1.", options: ["0", "1", "5", "Tidak tertakrif"], answerText: "0", explanation: "Mana-mana logaritma dengan nombor asas 1 ialah 0 (a⁰ = 1)." },
+            { q: "Permudahkan 3 log₂ x - log₂ y dalam bentuk tunggal.", options: ["log₂ (x³ / y)", "log₂ (3x / y)", "log₂ (x - y)³", "3 log₂ (x / y)"], answerText: "log₂ (x³ / y)", explanation: "log₂ x³ - log₂ y = log₂ (x³ / y)." }
+        ];
+
         let quizSetBab1 = [], indexBab1 = 0, scoreBab1 = 0;
         let quizSetBab2 = [], indexBab2 = 0, scoreBab2 = 0;
         let quizSetBab3 = [], indexBab3 = 0, scoreBab3 = 0;
+        let quizSetBab4 = [], indexBab4 = 0, scoreBab4 = 0;
 
         function startQuizBab1() {
             quizSetBab1 = [...bankBab1].sort(() => 0.5 - Math.random()).slice(0, 10);
@@ -577,6 +696,62 @@
                 document.getElementById('card-bab3').classList.add('hidden');
                 document.getElementById('result-bab3').classList.remove('hidden');
                 document.getElementById('score-bab3').innerText = `Markah anda: ${scoreBab3} / 10`;
+            }
+        }
+
+        function startQuizBab4() {
+            quizSetBab4 = [...bankBab4].sort(() => 0.5 - Math.random()).slice(0, 10);
+            indexBab4 = 0; scoreBab4 = 0;
+            document.getElementById('result-bab4').classList.add('hidden');
+            document.getElementById('card-bab4').classList.remove('hidden');
+            loadQ4();
+        }
+
+        function loadQ4() {
+            const data = quizSetBab4[indexBab4];
+            document.getElementById('q-label-bab4').innerText = `Soalan ${indexBab4 + 1} dari 10 (Bab 4)`;
+            document.getElementById('question-bab4').innerText = `${indexBab4 + 1}. ${data.q}`;
+            const container = document.getElementById('options-bab4');
+            container.innerHTML = '';
+            document.getElementById('feedback-bab4').classList.add('hidden');
+            document.getElementById('next-bab4').classList.add('hidden');
+
+            [...data.options].sort(() => 0.5 - Math.random()).forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-700 bg-slate-900/60 text-sm font-medium hover:bg-slate-700/50 transition-all";
+                btn.innerText = opt;
+                btn.onclick = () => checkAns4(opt, data.answerText, data.explanation, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        function checkAns4(sel, cor, exp, btn) {
+            const btns = document.getElementById('options-bab4').querySelectorAll('button');
+            btns.forEach(b => b.disabled = true);
+            const fb = document.getElementById('feedback-bab4');
+            fb.classList.remove('hidden');
+
+            if(sel === cor) {
+                btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20";
+                fb.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Betul! ${exp}`;
+                scoreBab4++;
+            } else {
+                btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
+                btns.forEach(b => { if(b.innerText === cor) b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium"; });
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-500/10 text-rose-300 border border-rose-500/20";
+                fb.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2"></i> Kurang tepat. ${exp}`;
+            }
+            document.getElementById('next-bab4').classList.remove('hidden');
+        }
+
+        function nextQuestionBab4() {
+            indexBab4++;
+            if(indexBab4 < quizSetBab4.length) loadQ4();
+            else {
+                document.getElementById('card-bab4').classList.add('hidden');
+                document.getElementById('result-bab4').classList.remove('hidden');
+                document.getElementById('score-bab4').innerText = `Markah anda: ${scoreBab4} / 10`;
             }
         }
     </script>
