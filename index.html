@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery AddMath: Bab 1 Fungsi (15 Soalan)</title>
+    <title>Mastery AddMath: Bab 1 Fungsi (Kuiz Rawak)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@
                 <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">Dashboard</button>
                 <button onclick="switchTab('visual')" id="btn-visual" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Visual Hubungan</button>
                 <button onclick="switchTab('gubahan')" id="btn-gubahan" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Gubahan & Songsang</button>
-                <button onclick="switchTab('kuiz')" id="btn-kuiz" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz (15 Soalan)</button>
+                <button onclick="switchTab('kuiz')" id="btn-kuiz" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Dinamik</button>
             </nav>
         </div>
     </header>
@@ -73,15 +73,15 @@
                 <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
                 <div class="relative z-10 max-w-2xl space-y-4">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                        <i class="fa-solid fa-sparkles"></i> Modul Bank 15 Soalan Latihan
+                        <i class="fa-solid fa-sparkles"></i> Modul Soalan Rawak Dinamik
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Kuasai Konsep <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Fungsi</span> Sepenuhnya</h2>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Kuasai Konsep <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Fungsi</span> Tanpa Bosan</h2>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Kini dilengkapi dengan 15 soalan latihan komprehensif merangkumi pelbagai aras kesukaran gaya SPM untuk memastikan anda betul-betul faham.
+                        Soalan akan sentiasa bertukar-tukar secara rawak setiap kali anda memulakan sesi kuiz baharu!
                     </p>
                     <div class="flex flex-wrap gap-3 pt-2">
-                        <button onclick="switchTab('kuiz')" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30 flex items-center gap-2">
-                            Mula Kuiz 15 Soalan <i class="fa-solid fa-arrow-right text-xs"></i>
+                        <button onclick="switchTab('kuiz'); startQuiz();" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30 flex items-center gap-2">
+                            Mula Kuiz Rawak <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
                     </div>
                 </div>
@@ -106,8 +106,8 @@
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-3">
                         <h4 class="font-bold text-purple-300 text-sm">Set A (Domain)</h4>
                         <div class="flex justify-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">2</span>
-                            <span class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">3</span>
+                            <span class="w-10 h-10 rounded-xl bg-purple-600/25 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">2</span>
+                            <span class="w-10 h-10 rounded-xl bg-purple-600/25 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">3</span>
                         </div>
                     </div>
                     <div class="space-y-2">
@@ -117,9 +117,9 @@
                     </div>
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-3">
                         <h4 class="font-bold text-indigo-300 text-sm">Set B (Kodomain)</h4>
-                        <div id="codomain-set" class="flex justify-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">4</span>
-                            <span class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">6</span>
+                        <div class="flex justify-center gap-3">
+                            <span class="w-10 h-10 rounded-xl bg-indigo-600/25 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">4</span>
+                            <span class="w-10 h-10 rounded-xl bg-indigo-600/25 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">6</span>
                         </div>
                     </div>
                 </div>
@@ -130,32 +130,37 @@
         <section id="tab-gubahan" class="tab-content space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-4">
-                    <h3 class="text-xl font-bold text-white">Fungsi Gubahan $fg(x)$</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Notasi $fg(x)$ bermaksud $f[g(x)]$. Selesaikan fungsi dalam kurungan terlebih dahulu.</p>
+                    <h3 class="text-xl font-bold text-white">Fungsi Gubahan fg(x)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Notasi fg(x) bermaksud f[g(x)]. Selesaikan fungsi dalam kurungan terlebih dahulu.</p>
                 </div>
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-4">
-                    <h3 class="text-xl font-bold text-white">Fungsi Songsang $f^{-1}(x)$</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Hanya wujud untuk hubungan satu kepada satu. Graf bersimetri pada garis $y = x$.</p>
+                    <h3 class="text-xl font-bold text-white">Fungsi Songsang f⁻¹(x)</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Hanya wujud untuk hubungan satu kepada satu. Graf bersimetri pada garis y = x.</p>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 4: KUIZ 15 SOALAN -->
+        <!-- TAB 4: KUIZ RAWAK DINAMIK -->
         <section id="tab-kuiz" class="tab-content space-y-6">
             <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-xl">
                 <div>
-                    <span class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Uji Minda Komprehensif</span>
-                    <h2 class="text-2xl font-bold text-white mt-1">Cabaran 15 Soalan Bab 1</h2>
-                    <p class="text-slate-300 text-sm">Jawab soalan di bawah dan lihat penerangan lengkap bagi setiap jawapan.</p>
+                    <span id="quiz-progress-label" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Rawak)</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Cabaran Kuiz Dinamik</h2>
+                    <p class="text-slate-300 text-sm">Jawab soalan demi soalan. Susunan soalan dan pilihan jawapan akan diayak secara rawak!</p>
                 </div>
-                <button onclick="resetQuiz()" class="px-5 py-2.5 rounded-xl bg-white text-purple-900 hover:bg-purple-100 font-bold text-sm transition-all shadow-md flex items-center gap-2">
-                    <i class="fa-solid fa-rotate-right"></i> Mula Semula
+                <button onclick="startQuiz()" class="px-5 py-2.5 rounded-xl bg-white text-purple-900 hover:bg-purple-100 font-bold text-sm transition-all shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-rotate-right"></i> Soalan Baharu
                 </button>
             </div>
 
-            <!-- Kontena Soalan -->
-            <div id="quiz-container" class="space-y-6">
-                <!-- Dijana secara dinamik melalui JS -->
+            <!-- Kad Soalan Aktif -->
+            <div id="active-question-card" class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+                <h3 id="question-text" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                <div id="options-container" class="space-y-3">
+                    <!-- Pilihan jawapan masuk sini -->
+                </div>
+                <div id="explanation-box" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                <button id="next-q-btn" onclick="nextQuestion()" class="hidden w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm transition-all shadow-lg shadow-purple-600/30">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-1"></i></button>
             </div>
 
             <!-- Kad Keputusan Akhir -->
@@ -164,14 +169,14 @@
                     <i class="fa-solid fa-trophy"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Selesai!</h3>
-                <p id="score-text" class="text-lg text-slate-300">Markah anda: <span class="font-bold text-purple-400">0 / 15</span></p>
-                <button onclick="resetQuiz()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Cuba Kuiz Sekali Lagi</button>
+                <p id="score-text" class="text-lg text-slate-300">Markah anda: <span class="font-bold text-purple-400">0 / 10</span></p>
+                <button onclick="startQuiz()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Cuba Set Soalan Baharu</button>
             </div>
         </section>
 
     </main>
 
-    <!-- JavaScript Interaktif -->
+    <!-- JavaScript Interaktif Dinamik -->
     <script>
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
@@ -180,6 +185,9 @@
             });
             document.getElementById('tab-' + tabId).classList.add('active');
             document.getElementById('btn-' + tabId).className = "tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
+            if(tabId === 'kuiz' && currentQuizSet.length === 0) {
+                startQuiz();
+            }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -205,178 +213,106 @@
             }
         }
 
-        // Bank 15 Soalan Latihan
-        const quizData = [
-            {
-                question: "1. Antara yang berikut, yang manakah mewakili fungsi?",
-                options: ["Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Hubungan satu kepada satu atau banyak kepada satu", "Hubungan songsang mutlak"],
-                answer: 2,
-                explanation: "Fungsi ialah hubungan khas di mana setiap objek mempunyai hanya satu imej sahaja (satu kepada satu atau banyak kepada satu)."
-            },
-            {
-                question: "2. Diberi fungsi f(x) = 3x - 5, cari nilai imej bagi x = 4.",
-                options: ["7", "12", "17", "2"],
-                answer: 0,
-                explanation: "f(4) = 3(4) - 5 = 12 - 5 = 7."
-            },
-            {
-                question: "3. Diberi f(x) = 2x + 3, cari objek x apabila f(x) = 11.",
-                options: ["4", "5", "7", "3"],
-                answer: 0,
-                explanation: "2x + 3 = 11 -> 2x = 8 -> x = 4."
-            },
-            {
-                question: "4. Diberi fungsi g(x) = 4x - 3, cari fungsi songsang g⁻¹(x).",
-                options: ["(x - 3)/4", "(x + 3)/4", "4x + 3", "3x - 4"],
-                answer: 1,
-                explanation: "Katakan y = 4x - 3 -> y + 3 = 4x -> x = (y + 3)/4. Maka g⁻¹(x) = (x + 3)/4."
-            },
-            {
-                question: "5. Diberi f(x) = 2x dan g(x) = x + 3, cari fungsi gubahan fg(x).",
-                options: ["2x + 3", "2x + 6", "x + 6", "2x^2 + 6x"],
-                answer: 1,
-                explanation: "fg(x) = f(x + 3) = 2(x + 3) = 2x + 6."
-            },
-            {
-                question: "6. Apakah garis simetri bagi graf suatu fungsi f(x) dan fungsi songsangnya f⁻¹(x)?",
-                options: ["Paksi-x", "Paksi-y", "Garis y = x", "Garis y = -x"],
-                answer: 2,
-                explanation: "Graf f(x) dan f⁻¹(x) sentiasa bersimetri pada garis y = x."
-            },
-            {
-                question: "7. Diberi f(x) = 5 - 2x, cari imej bagi x = -3.",
-                options: ["-1", "11", "5", "-6"],
-                answer: 1,
-                explanation: "f(-3) = 5 - 2(-3) = 5 + 6 = 11."
-            },
-            {
-                question: "8. Jika f: x → 3x + h dan f(2) = 11, cari nilai pemalar h.",
-                options: ["3", "5", "17", "6"],
-                answer: 1,
-                explanation: "f(2) = 3(2) + h = 11 -> 6 + h = 11 -> h = 5."
-            },
-            {
-                question: "9. Diberi fungsi g(x) = x / (x - 2), cari nilai g(4).",
-                options: ["2", "1", "0.5", "Takrif tidak sah"],
-                answer: 0,
-                explanation: "g(4) = 4 / (4 - 2) = 4 / 2 = 2."
-            },
-            {
-                question: "10. Diberi fg(x) = 3x + 1 dan g(x) = x - 1, cari fungsi f(x).",
-                options: ["3x - 2", "3x + 1", "3x + 4", "3(x - 1)"],
-                answer: 2,
-                explanation: "Katakan u = x - 1 (x = u + 1). f(u) = 3(u + 1) + 1 = 3u + 4. Maka f(x) = 3x + 4."
-            },
-            {
-                question: "11. Apakah syarat wajib supaya fungsi songsang wujud bagi suatu fungsi?",
-                options: ["Hubungan banyak kepada satu", "Hubungan satu kepada satu", "Domain mesti kosong", "Kodomain bernilai negatif"],
-                answer: 1,
-                explanation: "Fungsi songsang hanya wujud jika hubungan ialah satu kepada satu."
-            },
-            {
-                question: "12. Diberi f(x) = 3x² - 2, cari nilai bagi f(-2).",
-                options: ["10", "16", "-14", "12"],
-                answer: 0,
-                explanation: "f(-2) = 3(-2)² - 2 = 3(4) - 2 = 12 - 2 = 10."
-            },
-            {
-                question: "13. Diberi h(x) = |3x - 5|, cari nilai h(-1).",
-                options: ["2", "-8", "8", "-2"],
-                answer: 2,
-                explanation: "h(-1) = |3(-1) - 5| = |-3 - 5| = |-8| = 8."
-            },
-            {
-                question: "14. Diberi f(x) = 4 / x untuk x ≠ 0, cari f²(x) [iaitu ff(x)].",
-                options: ["x", "16/x", "4/x", "x/4"],
-                answer: 0,
-                explanation: "ff(x) = f(4/x) = 4 / (4/x) = 4 × (x/4) = x."
-            },
-            {
-                question: "15. Jika fungsi f(x) = mx + c mempunyai f(0) = 3 dan f(2) = 7, cari nilai m dan c.",
-                options: ["m = 2, c = 3", "m = 3, c = 2", "m = 1, c = 3", "m = 2, c = -3"],
-                answer: 0,
-                explanation: "f(0) = c = 3. f(2) = m(2) + 3 = 7 -> 2m = 4 -> m = 2."
-            }
+        // Master Bank Soalan (15 Soalan)
+        const masterQuizBank = [
+            { q: "Antara yang berikut, yang manakah mewakili fungsi?", options: ["Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Hubungan satu kepada satu atau banyak kepada satu", "Hubungan songsang mutlak"], answerText: "Hubungan satu kepada satu atau banyak kepada satu", explanation: "Fungsi ialah hubungan khas di mana setiap objek mempunyai hanya satu imej sahaja." },
+            { q: "Diberi fungsi f(x) = 3x - 5, cari nilai imej bagi x = 4.", options: ["7", "12", "17", "2"], answerText: "7", explanation: "f(4) = 3(4) - 5 = 12 - 5 = 7." },
+            { q: "Diberi fungsi f(x) = 2x + 3, cari objek x apabila f(x) = 11.", options: ["4", "5", "7", "3"], answerText: "4", explanation: "2x + 3 = 11 -> 2x = 8 -> x = 4." },
+            { q: "Diberi fungsi g(x) = 4x - 3, cari fungsi songsang g⁻¹(x).", options: ["(x - 3)/4", "(x + 3)/4", "4x + 3", "3x - 4"], answerText: "(x + 3)/4", explanation: "Katakan y = 4x - 3 -> x = (y + 3)/4, maka g⁻¹(x) = (x + 3)/4." },
+            { q: "Diberi f(x) = 2x dan g(x) = x + 3, cari fungsi gubahan fg(x).", options: ["2x + 3", "2x + 6", "x + 6", "2x^2 + 6x"], answerText: "2x + 6", explanation: "fg(x) = f(x + 3) = 2(x + 3) = 2x + 6." },
+            { q: "Apakah garis simetri bagi graf suatu fungsi f(x) dan fungsi songsangnya f⁻¹(x)?", options: ["Paksi-x", "Paksi-y", "Garis y = x", "Garis y = -x"], answerText: "Garis y = x", explanation: "Graf f(x) dan f⁻¹(x) sentiasa bersimetri pada garis y = x." },
+            { q: "Diberi f(x) = 5 - 2x, cari imej bagi x = -3.", options: ["-1", "11", "5", "-6"], answerText: "11", explanation: "f(-3) = 5 - 2(-3) = 5 + 6 = 11." },
+            { q: "Jika f: x → 3x + h dan f(2) = 11, cari nilai pemalar h.", options: ["3", "5", "17", "6"], answerText: "5", explanation: "f(2) = 3(2) + h = 11 -> 6 + h = 11 -> h = 5." },
+            { q: "Diberi fungsi g(x) = x / (x - 2), cari nilai g(4).", options: ["2", "1", "0.5", "Takrif tidak sah"], answerText: "2", explanation: "g(4) = 4 / (4 - 2) = 4 / 2 = 2." },
+            { q: "Diberi fg(x) = 3x + 1 dan g(x) = x - 1, cari fungsi f(x).", options: ["3x - 2", "3x + 1", "3x + 4", "3(x - 1)"], answerText: "3x + 4", explanation: "Katakan u = x - 1 (x = u + 1). f(u) = 3(u + 1) + 1 = 3u + 4." },
+            { q: "Apakah syarat wajib supaya fungsi songsang wujud bagi suatu fungsi?", options: ["Hubungan banyak kepada satu", "Hubungan satu kepada satu", "Domain mesti kosong", "Kodomain bernilai negatif"], answerText: "Hubungan satu kepada satu", explanation: "Fungsi songsang hanya wujud jika hubungan ialah satu kepada satu." },
+            { q: "Diberi f(x) = 3x² - 2, cari nilai bagi f(-2).", options: ["10", "16", "-14", "12"], answerText: "10", explanation: "f(-2) = 3(-2)² - 2 = 3(4) - 2 = 10." },
+            { q: "Diberi h(x) = |3x - 5|, cari nilai h(-1).", options: ["2", "-8", "8", "-2"], answerText: "8", explanation: "h(-1) = |3(-1) - 5| = |-3 - 5| = |-8| = 8." },
+            { q: "Diberi f(x) = 4 / x untuk x ≠ 0, cari f²(x) [iaitu ff(x)].", options: ["x", "16/x", "4/x", "x/4"], answerText: "x", explanation: "ff(x) = f(4/x) = 4 / (4/x) = x." },
+            { q: "Jika fungsi f(x) = mx + c mempunyai f(0) = 3 dan f(2) = 7, cari nilai m dan c.", options: ["m = 2, c = 3", "m = 3, c = 2", "m = 1, c = 3", "m = 2, c = -3"], answerText: "m = 2, c = 3", explanation: "f(0) = c = 3. f(2) = m(2) + 3 = 7 -> 2m = 4 -> m = 2." }
         ];
 
-        let userAnswers = {};
+        let currentQuizSet = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
 
-        function loadQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = '';
+        function startQuiz() {
+            // Ambil 10 soalan secara rawak daripada 10 soalan bank setiap kali sesi bermula
+            currentQuizSet = [...masterQuizBank].sort(() => 0.5 - Math.random()).slice(0, 10);
+            currentQuestionIndex = 0;
+            score = 0;
+
             document.getElementById('quiz-result').classList.add('hidden');
-            userAnswers = {};
-
-            quizData.forEach((q, index) => {
-                let optionsHtml = '';
-                q.options.forEach((opt, optIndex) => {
-                    optionsHtml += `
-                        <button onclick="selectOption(${index}, ${optIndex})" id="q${index}-opt${optIndex}" class="w-full text-left p-4 rounded-xl border border-slate-700 bg-slate-900/60 text-sm font-medium hover:bg-slate-700/50 transition-all flex items-center justify-between">
-                            <span>${opt}</span>
-                        </button>
-                    `;
-                });
-
-                container.innerHTML += `
-                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-4">
-                        <h3 class="font-bold text-white text-base">${q.question}</h3>
-                        <div class="space-y-2.5">${optionsHtml}</div>
-                        <div id="feedback-${index}" class="hidden p-4 rounded-xl text-sm font-medium"></div>
-                    </div>
-                `;
-            });
+            document.getElementById('active-question-card').classList.remove('hidden');
+            loadCurrentQuestion();
         }
 
-        function selectOption(qIndex, optIndex) {
-            if (userAnswers[qIndex] !== undefined) return;
-            userAnswers[qIndex] = optIndex;
-
-            const q = quizData[qIndex];
-            const feedbackEl = document.getElementById(`feedback-${qIndex}`);
+        function loadCurrentQuestion() {
+            const qData = currentQuizSet[currentQuestionIndex];
+            document.getElementById('quiz-progress-label').innerText = `Soalan ${currentQuestionIndex + 1} dari 10 (Rawak)`;
+            document.getElementById('question-text').innerText = `${currentQuestionIndex + 1}. ${qData.q}`;
             
-            for (let i = 0; i < q.options.length; i++) {
-                const btn = document.getElementById(`q${qIndex}-opt${i}`);
-                btn.disabled = true;
-                if (i === q.answer) {
-                    btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
-                } else if (i === optIndex) {
-                    btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
-                }
-            }
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            document.getElementById('explanation-box').classList.add('hidden');
+            document.getElementById('next-q-btn').classList.add('hidden');
 
-            feedbackEl.classList.remove('hidden');
-            if (optIndex === q.answer) {
-                feedbackEl.className = "p-4 rounded-xl text-sm font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20";
-                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i> Betul! ${q.explanation}`;
-            } else {
-                feedbackEl.className = "p-4 rounded-xl text-sm font-medium bg-rose-500/10 text-rose-300 border border-rose-500/20";
-                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2 text-rose-400"></i> Kurang tepat. ${q.explanation}`;
-            }
+            // Ayak pilihan jawapan supaya kedudukan pilihan (A, B, C, D) sentiasa rawak
+            let shuffledOptions = [...qData.options].sort(() => 0.5 - Math.random());
 
-            if (Object.keys(userAnswers).length === quizData.length) {
-                setTimeout(showResult, 600);
-            }
-        }
-
-        function showResult() {
-            let score = 0;
-            quizData.forEach((q, index) => {
-                if (userAnswers[index] === q.answer) score++;
+            shuffledOptions.forEach((opt) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-700 bg-slate-900/60 text-sm font-medium hover:bg-slate-700/50 transition-all";
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(opt, qData.answerText, qData.explanation, btn);
+                optionsContainer.appendChild(btn);
             });
-
-            document.getElementById('score-text').innerHTML = `Markah anda: <span class="font-bold text-purple-400">${score} / ${quizData.length}</span>`;
-            const resultBox = document.getElementById('quiz-result');
-            resultBox.classList.remove('hidden');
-            resultBox.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function resetQuiz() {
-            loadQuiz();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function checkAnswer(selectedOpt, correctOpt, explanation, clickedBtn) {
+            const allBtns = document.getElementById('options-container').querySelectorAll('button');
+            allBtns.forEach(b => b.disabled = true);
+
+            const feedbackEl = document.getElementById('explanation-box');
+            feedbackEl.classList.remove('hidden');
+
+            if (selectedOpt === correctOpt) {
+                clickedBtn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
+                feedbackEl.className = "p-4 rounded-xl text-sm font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-check mr-2 text-emerald-400"></i> Betul! ${explanation}`;
+                score++;
+            } else {
+                clickedBtn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
+                // Serlahkan jawapan betul
+                allBtns.forEach(b => {
+                    if (b.innerText === correctOpt) {
+                        b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
+                    }
+                });
+                feedbackEl.className = "p-4 rounded-xl text-sm font-medium bg-rose-500/10 text-rose-300 border border-rose-500/20";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2 text-rose-400"></i> Kurang tepat. ${explanation}`;
+            }
+
+            document.getElementById('next-q-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < currentQuizSet.length) {
+                loadCurrentQuestion();
+            } else {
+                showFinalResult();
+            }
+        }
+
+        function showFinalResult() {
+            document.getElementById('active-question-card').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('score-text').innerHTML = `Markah anda: <span class="font-bold text-purple-400">${score} / 10</span>`;
         }
 
         window.onload = function() {
-            loadQuiz();
+            startQuiz();
         };
     </script>
 </body>
