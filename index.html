@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery AddMath: Bab 1 & Bab 2 (KSSM Tingkatan 4)</title>
+    <title>Mastery AddMath: Bab 1, Bab 2 & Bab 3 (KSSM Tingkatan 4)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,12 +57,15 @@
             </div>
 
             <!-- Pemilih Bab Utama -->
-            <div class="flex items-center gap-2 bg-slate-800/90 p-1.5 rounded-2xl border border-slate-700/60 shadow-inner">
+            <div class="flex flex-wrap items-center justify-center gap-2 bg-slate-800/90 p-1.5 rounded-2xl border border-slate-700/60 shadow-inner">
                 <button onclick="switchChapter('bab1')" id="btn-ch1" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">
                     <i class="fa-solid fa-book-open mr-1"></i> Bab 1: Fungsi
                 </button>
                 <button onclick="switchChapter('bab2')" id="btn-ch2" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
-                    <i class="fa-solid fa-square-root-variable mr-1"></i> Bab 2: Fungsi Kuadratik
+                    <i class="fa-solid fa-square-root-variable mr-1"></i> Bab 2: Kuadratik
+                </button>
+                <button onclick="switchChapter('bab3')" id="btn-ch3" class="ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">
+                    <i class="fa-solid fa-cube mr-1"></i> Bab 3: Sistem Persamaan
                 </button>
             </div>
         </div>
@@ -75,7 +78,6 @@
         <!-- MODUL BAB 1: FUNGSI -->
         <!-- ========================================== -->
         <section id="chapter-bab1" class="view-section active space-y-6">
-            <!-- Navigasi Subtopik Bab 1 -->
             <nav class="flex flex-wrap gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/80">
                 <button onclick="switchTab('bab1', 'dash')" id="bab1-btn-dash" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 1</button>
                 <button onclick="switchTab('bab1', 'notasi')" id="bab1-btn-notasi" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Notasi & Jenis Hubungan</button>
@@ -83,7 +85,6 @@
                 <button onclick="switchTab('bab1', 'kuiz')" id="bab1-btn-kuiz" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Bab 1</button>
             </nav>
 
-            <!-- Tab 1.1: Dashboard Bab 1 -->
             <div id="bab1-content-dash" class="tab-content active space-y-6">
                 <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                     <div class="max-w-2xl space-y-4">
@@ -95,7 +96,6 @@
                 </div>
             </div>
 
-            <!-- Tab 1.2: Notasi & Jenis Hubungan -->
             <div id="bab1-content-notasi" class="tab-content space-y-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
                     <h3 class="text-xl font-bold text-white">Notasi Fungsi & Pemetaan</h3>
@@ -117,12 +117,11 @@
                 </div>
             </div>
 
-            <!-- Tab 1.3: Gubahan & Songsang -->
             <div id="bab1-content-gubahan" class="tab-content space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
                         <h3 class="text-lg font-bold text-white">Fungsi Gubahan fg(x)</h3>
-                        <p class="text-xs text-slate-300 leading-relaxed">Bermaksud <span class="font-mono text-purple-400">f(g(x))</span>. Selesaikan fungsi dalaman $g(x)$ dahulu, kemudian masukkan ke dalam fungsi luaran $f(x)$.</p>
+                        <p class="text-xs text-slate-300 leading-relaxed">Bermaksud <span class="font-mono text-purple-400">f(g(x))</span>. Selesaikan fungsi dalaman g(x) dahulu, kemudian masukkan ke dalam fungsi luaran f(x).</p>
                     </div>
                     <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
                         <h3 class="text-lg font-bold text-white">Fungsi Songsang f⁻¹(x)</h3>
@@ -131,7 +130,6 @@
                 </div>
             </div>
 
-            <!-- Tab 1.4: Kuiz Dinamik Bab 1 -->
             <div id="bab1-content-kuiz" class="tab-content space-y-6">
                 <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center gap-4 shadow-xl">
                     <div>
@@ -159,7 +157,6 @@
         <!-- MODUL BAB 2: FUNGSI KUADRATIK -->
         <!-- ========================================== -->
         <section id="chapter-bab2" class="view-section space-y-6">
-            <!-- Navigasi Subtopik Bab 2 -->
             <nav class="flex flex-wrap gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/80">
                 <button onclick="switchTab('bab2', 'dash')" id="bab2-btn-dash" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 2</button>
                 <button onclick="switchTab('bab2', 'diskriminan')" id="bab2-btn-diskriminan" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Jenis Punca & Diskriminan</button>
@@ -167,7 +164,6 @@
                 <button onclick="switchTab('bab2', 'kuiz')" id="bab2-btn-kuiz" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Bab 2</button>
             </nav>
 
-            <!-- Tab 2.1: Dashboard Bab 2 -->
             <div id="bab2-content-dash" class="tab-content active space-y-6">
                 <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                     <div class="max-w-2xl space-y-4">
@@ -179,7 +175,6 @@
                 </div>
             </div>
 
-            <!-- Tab 2.2: Jenis Punca & Diskriminan -->
             <div id="bab2-content-diskriminan" class="tab-content space-y-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700 pb-4">
@@ -197,7 +192,6 @@
                 </div>
             </div>
 
-            <!-- Tab 2.3: Bentuk Verteks -->
             <div id="bab2-content-verteks" class="tab-content space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
@@ -211,7 +205,6 @@
                 </div>
             </div>
 
-            <!-- Tab 2.4: Kuiz Dinamik Bab 2 -->
             <div id="bab2-content-kuiz" class="tab-content space-y-6">
                 <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center gap-4 shadow-xl">
                     <div>
@@ -234,6 +227,90 @@
             </div>
         </section>
 
+
+        <!-- ========================================== -->
+        <!-- MODUL BAB 3: SISTEM PERSAMAAN -->
+        <!-- ========================================== -->
+        <section id="chapter-bab3" class="view-section space-y-6">
+            <!-- Navigasi Subtopik Bab 3 -->
+            <nav class="flex flex-wrap gap-2 bg-slate-800/60 p-2 rounded-2xl border border-slate-700/80">
+                <button onclick="switchTab('bab3', 'dash')" id="bab3-btn-dash" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 3</button>
+                <button onclick="switchTab('bab3', 'tiga')" id="bab3-btn-tiga" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Sistem Linear (3 Pembolehubah)</button>
+                <button onclick="switchTab('bab3', 'serentak')" id="bab3-btn-serentak" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50">Persamaan Serentak (Linear & Tak Linear)</button>
+                <button onclick="switchTab('bab3', 'kuiz')" id="bab3-btn-kuiz" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Bab 3</button>
+            </nav>
+
+            <!-- Tab 3.1: Dashboard Bab 3 -->
+            <div id="bab3-content-dash" class="tab-content active space-y-6">
+                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
+                    <div class="max-w-2xl space-y-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 3: <span class="text-purple-400">Sistem Persamaan</span></h2>
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Kuasai penyelesaian sistem persamaan linear dalam tiga pemboleh ubah (3D) dan persamaan serentak yang melibatkan satu persamaan linear dan satu persamaan tak linear.</p>
+                        <button onclick="switchTab('bab3', 'kuiz'); startQuizBab3();" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Mula Kuiz Bab 3</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3.2: Sistem Linear 3 Pembolehubah -->
+            <div id="bab3-content-tiga" class="tab-content space-y-6">
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
+                    <h3 class="text-xl font-bold text-white">Sistem Persamaan Linear dalam Tiga Pemboleh Ubah</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Bentuk am melibatkan tiga pemboleh ubah (contohnya x, y, z): <span class="font-mono text-purple-400">ax + by + cz = d</span>. Geometrinya mewakili satah dalam ruang 3 dimensi.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-purple-300 text-sm">Satu Penyelesaian</h4>
+                            <p class="text-xs text-slate-400 mt-1">Ketiga-tiga satah bersilang pada satu titik unik (x, y, z).</p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-indigo-300 text-sm">Penyelesaian Tak Terhingga</h4>
+                            <p class="text-xs text-slate-400 mt-1">Satah-satah bersilang sepanjang satu garis lurus yang sepunya.</p>
+                        </div>
+                        <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-2xl">
+                            <h4 class="font-bold text-pink-300 text-sm">Tiada Penyelesaian</h4>
+                            <p class="text-xs text-slate-400 mt-1">Satah-satah adalah selari atau tidak bersilang pada mana-mana titik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3.3: Persamaan Serentak Linear & Tak Linear -->
+            <div id="bab3-content-serentak" class="tab-content space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Kaedah Penyelesaian</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Boleh diselesaikan menggunakan <span class="font-mono text-purple-400">Kaedah Penghapusan</span>, <span class="font-mono text-purple-400">Kaedah Penggantian</span>, atau <span class="font-mono text-purple-400">Perwakilan Graf</span>.</p>
+                    </div>
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-white">Titik Persilangan</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">Penyelesaian persamaan serentak mewakili koordinat titik persilangan antara garis lurus linear dan lengkung tak linear pada satah Cartesian.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3.4: Kuiz Dinamik Bab 3 -->
+            <div id="bab3-content-kuiz" class="tab-content space-y-6">
+                <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center gap-4 shadow-xl">
+                    <div>
+                        <span id="q-label-bab3" class="text-xs font-semibold text-purple-300 uppercase">Soalan 1 dari 10 (Bab 3)</span>
+                        <h2 class="text-2xl font-bold text-white mt-1">Cabaran Kuiz Bab 3</h2>
+                    </div>
+                    <button onclick="startQuizBab3()" class="px-4 py-2 rounded-xl bg-white text-purple-900 hover:bg-purple-100 font-bold text-sm shadow-md">Soalan Baharu</button>
+                </div>
+                <div id="card-bab3" class="bg-slate-800/80 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+                    <h3 id="question-bab3" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                    <div id="options-bab3" class="space-y-3"></div>
+                    <div id="feedback-bab3" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+                    <button id="next-bab3" onclick="nextQuestionBab3()" class="hidden w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-sm shadow-lg">Soalan Seterusnya</button>
+                </div>
+                <div id="result-bab3" class="hidden bg-slate-800 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
+                    <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 3 Selesai!</h3>
+                    <p id="score-bab3" class="text-lg text-slate-300">Markah: 0 / 10</p>
+                    <button onclick="startQuizBab3()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm">Cuba Semula</button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- JavaScript Logika & Kuiz Dinamik -->
@@ -244,7 +321,11 @@
                 btn.className = "ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50";
             });
             document.getElementById('chapter-' + chId).classList.add('active');
-            document.getElementById('btn-' + (chId === 'bab1' ? 'ch1' : 'ch2')).className = "ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
+            
+            let activeBtnId = 'btn-ch1';
+            if(chId === 'bab2') activeBtnId = 'btn-ch2';
+            if(chId === 'bab3') activeBtnId = 'btn-ch3';
+            document.getElementById(activeBtnId).className = "ch-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -258,6 +339,7 @@
 
             if(chapter === 'bab1' && tabName === 'kuiz' && quizSetBab1.length === 0) startQuizBab1();
             if(chapter === 'bab2' && tabName === 'kuiz' && quizSetBab2.length === 0) startQuizBab2();
+            if(chapter === 'bab3' && tabName === 'kuiz' && quizSetBab3.length === 0) startQuizBab3();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -312,8 +394,23 @@
             { q: "Apakah nilai maksimum bagi f(x) = -(x - 1)² + 8?", options: ["8", "-8", "1", "-1"], answerText: "8", explanation: "Oleh kerana a = -1, nilai maksimum ialah k = 8." }
         ];
 
+        // Bank Soalan Bab 3
+        const bankBab3 = [
+            { q: "Apakah bentuk am bagi persamaan linear dalam tiga pemboleh ubah?", options: ["ax + by + cz = d", "ax² + by + cz = d", "ax + by = c", "ax + by + cz + dw = e"], answerText: "ax + by + cz = d", explanation: "Bentuk amnya ialah ax + by + cz = d dengan pemalar a, b, c bukan sifar." },
+            { q: "Berapakah bilangan jenis penyelesaian yang mungkin bagi sistem persamaan linear dalam tiga pemboleh ubah?", options: ["3 jenis", "2 jenis", "1 jenis", "4 jenis"], answerText: "3 jenis", explanation: "Tiga jenis penyelesaian: satu penyelesaian, penyelesaian tak terhingga, atau tiada penyelesaian." },
+            { q: "Apakah bentuk geometri bagi satu persamaan linear dalam tiga pemboleh ubah apabila dilukis dalam ruang 3D?", options: ["Satah", "Garis lurus", "Parabola", "Sfera"], answerText: "Satah", explanation: "Persamaan linear ax + by + cz = d mewakili sebuah satah dalam ruang tiga dimensi." },
+            { q: "Jika tiga satah bersilang pada satu garis lurus sepunya, sistem persamaan tersebut mempunyai...", options: ["Penyelesaian tak terhingga", "Satu penyelesaian unik", "Tiada penyelesaian", "Dua penyelesaian"], answerText: "Penyelesaian tak terhingga", explanation: "Persilangan sepanjang garis lurus menghasilkan penyelesaian tak terhingga." },
+            { q: "Antara kaedah berikut, yang manakah boleh digunakan untuk menyelesaikan sistem persamaan linear dalam tiga pemboleh ubah?", options: ["Kaedah penghapusan dan penggantian", "Kaedah pemfaktoran kuadratik sahaja", "Kaedah penyempurnaan kuasa dua sahaja", "Kaedah graf 2D sahaja"], answerText: "Kaedah penghapusan dan penggantian", explanation: "Penghapusan dan penggantian adalah kaedah algebra utama." },
+            { q: "Diberi persamaan serentak 2x + y = 4 dan y² - 4x = 0. Berapakah bilangan titik persilangan yang mungkin?", options: ["2 titik", "1 titik", "Tiada titik", "3 titik"], answerText: "2 titik", explanation: "Persamaan linear dan tak terhingga (kuadratik) lazimnya mempunyai sehingga 2 titik persilangan." },
+            { q: "Apakah yang diwakili oleh penyelesaian bagi persamaan serentak melibatkan satu persamaan linear dan satu persamaan tak linear pada satah?", options: ["Koordinat titik persilangan", "Paksi simetri", "Punca diskriminan", "Domain fungsi"], answerText: "Koordinat titik persilangan", explanation: "Penyelesaian persamaan serentak ialah titik di mana graf bersilang." },
+            { q: "Jika hasil penyelesaian sistem persamaan linear menghasilkan 0 = 12, ini bermaksud...", options: ["Tiada penyelesaian", "Penyelesaian tak terhingga", "x = 0, y = 0, z = 12", "Sistem konsisten"], answerText: "Tiada penyelesaian", explanation: "Pernyataan kontradiksi seperti 0 = 12 menunjukkan tiada penyelesaian wujud." },
+            { q: "Jika hasil penyelesaian sistem persamaan linear menghasilkan 0 = 0, ini bermaksud...", options: ["Penyelesaian tak terhingga", "Tiada penyelesaian", "Satu penyelesaian unik", "Ralat pengiraan"], answerText: "Penyelesaian tak terhingga", explanation: "Pernyataan benar yang konsisten seperti 0 = 0 menunjukkan penyelesaian tak terhingga." },
+            { q: "Kaedah penghapusan dalam sistem tiga pemboleh ubah melibatkan...", options: ["Menghapuskan satu pemboleh ubah secara berperingkat", "Menghapuskan semua pemboleh ubah serentak", "Menukar persamaan kepada bentuk kuadratik", "Mencari nilai diskriminan D"], answerText: "Menghapuskan satu pemboleh ubah secara berperingkat", explanation: "Langkah demi langkah mengurangkan kepada 2 pemboleh ubah, kemudian 1 pemboleh ubah." }
+        ];
+
         let quizSetBab1 = [], indexBab1 = 0, scoreBab1 = 0;
         let quizSetBab2 = [], indexBab2 = 0, scoreBab2 = 0;
+        let quizSetBab3 = [], indexBab3 = 0, scoreBab3 = 0;
 
         function startQuizBab1() {
             quizSetBab1 = [...bankBab1].sort(() => 0.5 - Math.random()).slice(0, 10);
@@ -424,6 +521,62 @@
                 document.getElementById('card-bab2').classList.add('hidden');
                 document.getElementById('result-bab2').classList.remove('hidden');
                 document.getElementById('score-bab2').innerText = `Markah anda: ${scoreBab2} / 10`;
+            }
+        }
+
+        function startQuizBab3() {
+            quizSetBab3 = [...bankBab3].sort(() => 0.5 - Math.random()).slice(0, 10);
+            indexBab3 = 0; scoreBab3 = 0;
+            document.getElementById('result-bab3').classList.add('hidden');
+            document.getElementById('card-bab3').classList.remove('hidden');
+            loadQ3();
+        }
+
+        function loadQ3() {
+            const data = quizSetBab3[indexBab3];
+            document.getElementById('q-label-bab3').innerText = `Soalan ${indexBab3 + 1} dari 10 (Bab 3)`;
+            document.getElementById('question-bab3').innerText = `${indexBab3 + 1}. ${data.q}`;
+            const container = document.getElementById('options-bab3');
+            container.innerHTML = '';
+            document.getElementById('feedback-bab3').classList.add('hidden');
+            document.getElementById('next-bab3').classList.add('hidden');
+
+            [...data.options].sort(() => 0.5 - Math.random()).forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-700 bg-slate-900/60 text-sm font-medium hover:bg-slate-700/50 transition-all";
+                btn.innerText = opt;
+                btn.onclick = () => checkAns3(opt, data.answerText, data.explanation, btn);
+                container.appendChild(btn);
+            });
+        }
+
+        function checkAns3(sel, cor, exp, btn) {
+            const btns = document.getElementById('options-bab3').querySelectorAll('button');
+            btns.forEach(b => b.disabled = true);
+            const fb = document.getElementById('feedback-bab3');
+            fb.classList.remove('hidden');
+
+            if(sel === cor) {
+                btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20";
+                fb.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Betul! ${exp}`;
+                scoreBab3++;
+            } else {
+                btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
+                btns.forEach(b => { if(b.innerText === cor) b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium"; });
+                fb.className = "p-4 rounded-xl text-sm font-medium bg-rose-500/10 text-rose-300 border border-rose-500/20";
+                fb.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2"></i> Kurang tepat. ${exp}`;
+            }
+            document.getElementById('next-bab3').classList.remove('hidden');
+        }
+
+        function nextQuestionBab3() {
+            indexBab3++;
+            if(indexBab3 < quizSetBab3.length) loadQ3();
+            else {
+                document.getElementById('card-bab3').classList.add('hidden');
+                document.getElementById('result-bab3').classList.remove('hidden');
+                document.getElementById('score-bab3').innerText = `Markah anda: ${scoreBab3} / 10`;
             }
         }
     </script>
