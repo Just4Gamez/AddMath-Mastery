@@ -35,6 +35,8 @@
         .view-section.active { display: block; animation: fadeIn 0.4s ease-in-out; }
         .tab-content { display: none; }
         .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        .submenu-container { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; opacity: 0; }
+        .submenu-container.active { max-height: 500px; opacity: 1; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
@@ -63,51 +65,96 @@
         </div>
     </header>
 
-    <!-- Kandungan Utama dengan Susun Atur Sidebar di Kiri -->
+    <!-- Kandungan Utama -->
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-8">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
             
-            <!-- Sidebar Pemilih Bab (Disusun Menegak di Kiri) -->
+            <!-- Sidebar Navigasi Bertingkat (Accordion) di Kiri -->
             <aside class="lg:col-span-1 space-y-3">
-                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-4 shadow-xl space-y-2 sticky top-24">
-                    <h3 class="text-xs font-bold text-purple-400 uppercase tracking-wider px-3 mb-3">Modul Pembelajaran</h3>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-4 shadow-xl space-y-3 sticky top-24">
+                    <h3 class="text-xs font-bold text-purple-400 uppercase tracking-wider px-3 mb-1">Modul Pembelajaran</h3>
                     
-                    <button onclick="switchChapter('bab1')" id="btn-ch1" class="ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">
-                        <i class="fa-solid fa-book-open w-5 text-center"></i> 
-                        <span class="text-left">Bab 1: Fungsi</span>
-                    </button>
+                    <!-- ================= BAB 1 ================= -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab1')" id="btn-ch1" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-book-open w-5 text-center"></i> 
+                                <span class="text-left">Bab 1: Fungsi</span>
+                            </div>
+                            <i id="icon-ch1" class="fa-solid fa-chevron-down text-xs transition-transform rotate-180"></i>
+                        </button>
+                        <!-- Submenu Bab 1 -->
+                        <div id="sub-bab1" class="submenu-container active pl-4 space-y-1 border-l-2 border-purple-500/30 ml-4 my-1">
+                            <button onclick="switchTab('bab1', 'dash')" id="bab1-btn-dash" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 1</button>
+                            <button onclick="switchTab('bab1', 'notasi')" id="bab1-btn-notasi" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Notasi & Hubungan</button>
+                            <button onclick="switchTab('bab1', 'gubahan')" id="bab1-btn-gubahan" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Gubahan & Songsang</button>
+                            <button onclick="switchTab('bab1', 'kuiz')" id="bab1-btn-kuiz" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz & Nota Bab 1</button>
+                        </div>
+                    </div>
 
-                    <button onclick="switchChapter('bab2')" id="btn-ch2" class="ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                        <i class="fa-solid fa-square-root-variable w-5 text-center"></i> 
-                        <span class="text-left">Bab 2: Kuadratik</span>
-                    </button>
+                    <!-- ================= BAB 2 ================= -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab2')" id="btn-ch2" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-square-root-variable w-5 text-center"></i> 
+                                <span class="text-left">Bab 2: Kuadratik</span>
+                            </div>
+                            <i id="icon-ch2" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <!-- Submenu Bab 2 -->
+                        <div id="sub-bab2" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
+                            <button onclick="switchTab('bab2', 'dash')" id="bab2-btn-dash" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 2</button>
+                            <button onclick="switchTab('bab2', 'diskriminan')" id="bab2-btn-diskriminan" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Jenis Punca & Diskriminan</button>
+                            <button onclick="switchTab('bab2', 'verteks')" id="bab2-btn-verteks" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Bentuk Verteks</button>
+                            <button onclick="switchTab('bab2', 'kuiz')" id="bab2-btn-kuiz" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz & Nota Bab 2</button>
+                        </div>
+                    </div>
 
-                    <button onclick="switchChapter('bab3')" id="btn-ch3" class="ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                        <i class="fa-solid fa-cube w-5 text-center"></i> 
-                        <span class="text-left">Bab 3: Sistem Persamaan</span>
-                    </button>
+                    <!-- ================= BAB 3 ================= -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab3')" id="btn-ch3" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-cube w-5 text-center"></i> 
+                                <span class="text-left">Bab 3: Sistem Persamaan</span>
+                            </div>
+                            <i id="icon-ch3" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <!-- Submenu Bab 3 -->
+                        <div id="sub-bab3" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
+                            <button onclick="switchTab('bab3', 'dash')" id="bab3-btn-dash" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 3</button>
+                            <button onclick="switchTab('bab3', 'tiga')" id="bab3-btn-tiga" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Sistem Linear (3 Pembolehubah)</button>
+                            <button onclick="switchTab('bab3', 'serentak')" id="bab3-btn-serentak" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Persamaan Serentak</button>
+                            <button onclick="switchTab('bab3', 'kuiz')" id="bab3-btn-kuiz" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz & Nota Bab 3</button>
+                        </div>
+                    </div>
 
-                    <button onclick="switchChapter('bab4')" id="btn-ch4" class="ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                        <i class="fa-solid fa-calculator w-5 text-center"></i> 
-                        <span class="text-left">Bab 4: Indeks, Surd & Log</span>
-                    </button>
+                    <!-- ================= BAB 4 ================= -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab4')" id="btn-ch4" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-calculator w-5 text-center"></i> 
+                                <span class="text-left">Bab 4: Indeks, Surd & Log</span>
+                            </div>
+                            <i id="icon-ch4" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <!-- Submenu Bab 4 -->
+                        <div id="sub-bab4" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
+                            <button onclick="switchTab('bab4', 'dash')" id="bab4-btn-dash" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 4</button>
+                            <button onclick="switchTab('bab4', 'indeks')" id="bab4-btn-indeks" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Hukum Indeks</button>
+                            <button onclick="switchTab('bab4', 'surd')" id="bab4-btn-surd" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Surd & Konjugat</button>
+                            <button onclick="switchTab('bab4', 'log')" id="bab4-btn-log" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Hukum Logaritma</button>
+                            <button onclick="switchTab('bab4', 'kuiz')" id="bab4-btn-kuiz" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz & Nota Bab 4</button>
+                        </div>
+                    </div>
+
                 </div>
             </aside>
 
             <!-- Bahagian Paparan Kandungan Bab di Kanan -->
             <div class="lg:col-span-3 space-y-6">
 
-                <!-- ========================================== -->
                 <!-- MODUL BAB 1: FUNGSI -->
-                <!-- ========================================== -->
                 <section id="chapter-bab1" class="view-section active space-y-6">
-                    <nav class="flex flex-wrap gap-2 bg-slate-900/60 p-2 rounded-2xl border border-slate-800">
-                        <button onclick="switchTab('bab1', 'dash')" id="bab1-btn-dash" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 1</button>
-                        <button onclick="switchTab('bab1', 'notasi')" id="bab1-btn-notasi" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Notasi & Jenis Hubungan</button>
-                        <button onclick="switchTab('bab1', 'gubahan')" id="bab1-btn-gubahan" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Gubahan & Songsang</button>
-                        <button onclick="switchTab('bab1', 'kuiz')" id="bab1-btn-kuiz" class="bab1-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz & Nota Bab 1</button>
-                    </nav>
-
                     <div id="bab1-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
@@ -164,11 +211,7 @@
                         <div id="card-bab1" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
                             <h3 id="question-bab1" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
                             <div id="options-bab1" class="space-y-3"></div>
-                            
-                            <!-- Nota Penjelasan Eksklusif -->
                             <div id="feedback-bab1" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            
-                            <!-- Butang Navigasi (Seterusnya, Semula, Semak) -->
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800">
                                 <button onclick="prevQuestionBab1()" id="prev-btn-bab1" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
                                 <div class="ml-auto">
@@ -177,9 +220,7 @@
                             </div>
                         </div>
                         <div id="result-bab1" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
+                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
                             <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 1 Selesai!</h3>
                             <p id="score-bab1" class="text-lg text-slate-300">Markah: 0 / 10</p>
                             <button onclick="startQuizBab1()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
@@ -187,18 +228,8 @@
                     </div>
                 </section>
 
-
-                <!-- ========================================== -->
                 <!-- MODUL BAB 2: FUNGSI KUADRATIK -->
-                <!-- ========================================== -->
                 <section id="chapter-bab2" class="view-section space-y-6">
-                    <nav class="flex flex-wrap gap-2 bg-slate-900/60 p-2 rounded-2xl border border-slate-800">
-                        <button onclick="switchTab('bab2', 'dash')" id="bab2-btn-dash" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 2</button>
-                        <button onclick="switchTab('bab2', 'diskriminan')" id="bab2-btn-diskriminan" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Jenis Punca & Diskriminan</button>
-                        <button onclick="switchTab('bab2', 'verteks')" id="bab2-btn-verteks" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Bentuk Verteks</button>
-                        <button onclick="switchTab('bab2', 'kuiz')" id="bab2-btn-kuiz" class="bab2-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz & Nota Bab 2</button>
-                    </nav>
-
                     <div id="bab2-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
@@ -251,11 +282,7 @@
                         <div id="card-bab2" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
                             <h3 id="question-bab2" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
                             <div id="options-bab2" class="space-y-3"></div>
-                            
-                            <!-- Nota Penjelasan Eksklusif -->
                             <div id="feedback-bab2" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            
-                            <!-- Butang Navigasi -->
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800">
                                 <button onclick="prevQuestionBab2()" id="prev-btn-bab2" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
                                 <div class="ml-auto">
@@ -264,9 +291,7 @@
                             </div>
                         </div>
                         <div id="result-bab2" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
+                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
                             <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 2 Selesai!</h3>
                             <p id="score-bab2" class="text-lg text-slate-300">Markah: 0 / 10</p>
                             <button onclick="startQuizBab2()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
@@ -274,18 +299,8 @@
                     </div>
                 </section>
 
-
-                <!-- ========================================== -->
                 <!-- MODUL BAB 3: SISTEM PERSAMAAN -->
-                <!-- ========================================== -->
                 <section id="chapter-bab3" class="view-section space-y-6">
-                    <nav class="flex flex-wrap gap-2 bg-slate-900/60 p-2 rounded-2xl border border-slate-800">
-                        <button onclick="switchTab('bab3', 'dash')" id="bab3-btn-dash" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 3</button>
-                        <button onclick="switchTab('bab3', 'tiga')" id="bab3-btn-tiga" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Sistem Linear (3 Pembolehubah)</button>
-                        <button onclick="switchTab('bab3', 'serentak')" id="bab3-btn-serentak" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Persamaan Serentak</button>
-                        <button onclick="switchTab('bab3', 'kuiz')" id="bab3-btn-kuiz" class="bab3-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz & Nota Bab 3</button>
-                    </nav>
-
                     <div id="bab3-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
@@ -342,11 +357,7 @@
                         <div id="card-bab3" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
                             <h3 id="question-bab3" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
                             <div id="options-bab3" class="space-y-3"></div>
-                            
-                            <!-- Nota Penjelasan Eksklusif -->
                             <div id="feedback-bab3" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            
-                            <!-- Butang Navigasi -->
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800">
                                 <button onclick="prevQuestionBab3()" id="prev-btn-bab3" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
                                 <div class="ml-auto">
@@ -355,9 +366,7 @@
                             </div>
                         </div>
                         <div id="result-bab3" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
+                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
                             <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 3 Selesai!</h3>
                             <p id="score-bab3" class="text-lg text-slate-300">Markah: 0 / 10</p>
                             <button onclick="startQuizBab3()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
@@ -365,19 +374,8 @@
                     </div>
                 </section>
 
-
-                <!-- ========================================== -->
                 <!-- MODUL BAB 4: INDEKS, SURD & LOGARITMA -->
-                <!-- ========================================== -->
                 <section id="chapter-bab4" class="view-section space-y-6">
-                    <nav class="flex flex-wrap gap-2 bg-slate-900/60 p-2 rounded-2xl border border-slate-800">
-                        <button onclick="switchTab('bab4', 'dash')" id="bab4-btn-dash" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white">Ringkasan Bab 4</button>
-                        <button onclick="switchTab('bab4', 'indeks')" id="bab4-btn-indeks" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Hukum Indeks</button>
-                        <button onclick="switchTab('bab4', 'surd')" id="bab4-btn-surd" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Surd & Konjugat</button>
-                        <button onclick="switchTab('bab4', 'log')" id="bab4-btn-log" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800">Hukum Logaritma</button>
-                        <button onclick="switchTab('bab4', 'kuiz')" id="bab4-btn-kuiz" class="bab4-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz & Nota Bab 4</button>
-                    </nav>
-
                     <div id="bab4-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
@@ -453,11 +451,7 @@
                         <div id="card-bab4" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
                             <h3 id="question-bab4" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
                             <div id="options-bab4" class="space-y-3"></div>
-                            
-                            <!-- Nota Penjelasan Eksklusif -->
                             <div id="feedback-bab4" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            
-                            <!-- Butang Navigasi -->
                             <div class="flex items-center justify-between pt-4 border-t border-slate-800">
                                 <button onclick="prevQuestionBab4()" id="prev-btn-bab4" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
                                 <div class="ml-auto">
@@ -466,9 +460,7 @@
                             </div>
                         </div>
                         <div id="result-bab4" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
+                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
                             <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 4 Selesai!</h3>
                             <p id="score-bab4" class="text-lg text-slate-300">Markah: 0 / 10</p>
                             <button onclick="startQuizBab4()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
@@ -480,34 +472,52 @@
         </div>
     </main>
 
-    <!-- JavaScript Logika & Navigasi -->
+    <!-- JavaScript Logika Navigasi & Accordion -->
     <script>
-        function switchChapter(chId) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.ch-btn').forEach(btn => {
-                btn.className = "ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800";
+        function toggleChapter(chId) {
+            // Tutup semua submenu lain & reset warna butang bab
+            ['bab1', 'bab2', 'bab3', 'bab4'].forEach(id => {
+                const sub = document.getElementById('sub-' + id);
+                const btn = document.getElementById('btn-ch' + id.replace('bab',''));
+                const icon = document.getElementById('icon-ch' + id.replace('bab',''));
+                if(id !== chId) {
+                    sub.classList.remove('active');
+                    sub.style.borderLeftColor = '#1e293b';
+                    btn.className = "ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800";
+                    icon.classList.remove('rotate-180');
+                }
             });
+
+            // Buka atau tukar ke bab yang ditekan
+            const targetSub = document.getElementById('sub-' + chId);
+            const targetBtn = document.getElementById('btn-ch' + chId.replace('bab',''));
+            const targetIcon = document.getElementById('icon-ch' + chId.replace('bab',''));
+
+            targetSub.classList.add('active');
+            targetSub.style.borderLeftColor = '#8b5cf6';
+            targetBtn.className = "ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
+            targetIcon.classList.add('rotate-180');
+
+            // Paparkan bahagian bab di kanan dan pilih tab pertama (dash)
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
             document.getElementById('chapter-' + chId).classList.add('active');
             
-            let activeBtnId = 'btn-ch1';
-            if(chId === 'bab2') activeBtnId = 'btn-ch2';
-            if(chId === 'bab3') activeBtnId = 'btn-ch3';
-            if(chId === 'bab4') activeBtnId = 'btn-ch4';
-            document.getElementById(activeBtnId).className = "ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
-            
-            // Set tab utama kepada 'dash' secara automatik apabila bertukar bab
             switchTab(chId, 'dash');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function switchTab(chapter, tabName) {
-            const tabs = document.querySelectorAll('.' + chapter + '-tab');
-            tabs.forEach(t => t.className = chapter + '-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800');
-            const targetBtn = document.getElementById(chapter + '-btn-' + tabName);
-            if(targetBtn) {
-                targetBtn.className = chapter + '-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white';
+            // Urus kelas aktif untuk sub-menu bab semasa
+            const tabs = document.querySelectorAll('.sub-tab-' + chapter);
+            tabs.forEach(t => {
+                t.className = `sub-tab-${chapter} w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800`;
+            });
+            const targetTabBtn = document.getElementById(chapter + '-btn-' + tabName);
+            if(targetTabBtn) {
+                targetTabBtn.className = `sub-tab-${chapter} w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300`;
             }
 
+            // Paparkan kandungan tab yang dipilih di sebelah kanan
             document.querySelectorAll('#chapter-' + chapter + ' .tab-content').forEach(c => c.classList.remove('active'));
             const targetContent = document.getElementById(chapter + '-content-' + tabName);
             if(targetContent) {
@@ -553,7 +563,7 @@
             { q: "Cari fungsi songsang bagi f(x) = 5x - 3.", options: ["(x + 3)/5", "(x - 3)/5", "5x + 3", "(5x + 3)/3"], answerText: "(x + 3)/5", explanation: "Katakan y = 5x - 3 -> 5x = y + 3 -> x = (y + 3)/5, maka f⁻¹(x) = (x + 3)/5." },
             { q: "Apakah syarat wajib kewujudan fungsi songsang?", options: ["Hubungan satu kepada satu", "Hubungan banyak kepada satu", "Hubungan satu kepada banyak", "Domain kosong"], answerText: "Hubungan satu kepada satu", explanation: "Fungsi songsang hanya wujud jika hubungan tersebut adalah satu kepada satu agar setiap imej mempunyai tepat satu objek asal." },
             { q: "Diberi f(x) = 4x / (x - 2), cari f(4).", options: ["8", "4", "2", "16"], answerText: "8", explanation: "Gantikan x = 4: f(4) = 4(4) / (4 - 2) = 16 / 2 = 8." },
-            { q: "Jika f⁻¹(x) = 3x - 2, cari f(4).", options: ["2", "10", "4", "6"], answerText: "2", explanation: "Katakan f(k) = 4, maka f⁻¹(4) = k -> gunakan konsep f(f⁻¹(x)) = x atau f⁻¹(k)=4 -> 3k-2=4 -> k=2." },
+            { q: "Jika f⁻¹(x) = 3x - 2, cari f(4).", options: ["2", "10", "4", "6"], answerText: "2", explanation: "Gunakan konsep f(f⁻¹(x)) = x atau f⁻¹(k)=4 -> 3k-2=4 -> k=2." },
             { q: "Diberi f: x → 5 - 2x, cari x jika f(x) = 13.", options: ["-4", "4", "-9", "9"], answerText: "-4", explanation: "5 - 2x = 13 -> -2x = 8 -> x = -4." },
             { q: "Antara berikut, yang manakah fungsi?", options: ["Hubungan satu kepada satu atau banyak kepada satu", "Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Relasi songsang"], answerText: "Hubungan satu kepada satu atau banyak kepada satu", explanation: "Definisi fungsi memerlukan setiap objek mempunyai tepat satu imej sahaja." }
         ];
@@ -565,10 +575,10 @@
             { q: "Diberi 3x² - 6x + 5 = 0, cari hasil darab punca (HDP).", options: ["5/3", "-5/3", "2", "-2"], answerText: "5/3", explanation: "Formula Hasil Darab Punca (HDP) = c/a = 5/3." },
             { q: "Apakah syarat dua punca nyata dan berbeza?", options: ["b² - 4ac > 0", "b² - 4ac = 0", "b² - 4ac < 0", "b² - 4ac ≥ 0"], answerText: "b² - 4ac > 0", explanation: "Diskriminan D > 0 menunjukkan graf memotong paksi-x pada dua titik berlainan." },
             { q: "Cari nilai diskriminan bagi x² - 6x + 9 = 0.", options: ["0", "36", "-36", "18"], answerText: "0", explanation: "D = b² - 4ac = (-6)² - 4(1)(9) = 36 - 36 = 0 (punca kembar)." },
-            { q: "Jika kx² - 4x + 1 = 0 mempunyai dua punca sama, cari k.", options: ["4", "-4", "2", "-2"], answerText: "4", explanation: "Punca sama bermaksud b² - 4ac = 0 -> (-4)² - 4(k)(1) = 0 -> 16 = 4k -> k = 4." },
+            { q: "Jika kx² - 4x + 1 = 0 mempunyai dua punca sama, cari k.", options: ["4", "-4", "2", "-2"], answerText: "4", explanation: "Punca sama bermaksud b² - 4ac = 0 -> 16 = 4k -> k = 4." },
             { q: "Tentukan paksi simetri bagi f(x) = 2(x - 3)² + 5.", options: ["x = 3", "x = -3", "x = 5", "x = -5"], answerText: "x = 3", explanation: "Dalam bentuk verteks f(x) = a(x - h)² + k, persamaan paksi simetri ialah x = h." },
             { q: "Apakah titik minimum bagi f(x) = (x + 4)² - 7?", options: ["(-4, -7)", "(4, -7)", "(-4, 7)", "(4, 7)"], answerText: "(-4, -7)", explanation: "Titik verteks bagi bentuk a(x - h)² + k ialah (h, k), maka h = -4 dan k = -7." },
-            { q: "Ungkapkan f(x) = x² - 4x + 7 dalam bentuk verteks.", options: ["(x - 2)² + 3", "(x + 2)² + 3", "(x - 2)² - 3", "(x - 4)² + 7"], answerText: "(x - 2)² + 3", explanation: "Melalui kaedah menyempurnakan kuasa dua: x² - 4x + (-2)² - (-2)² + 7 = (x - 2)² - 4 + 7 = (x - 2)² + 3." },
+            { q: "Ungkapkan f(x) = x² - 4x + 7 dalam bentuk verteks.", options: ["(x - 2)² + 3", "(x + 2)² + 3", "(x - 2)² - 3", "(x - 4)² + 7"], answerText: "(x - 2)² + 3", explanation: "Melalui kaedah menyempurnakan kuasa dua: (x - 2)² - 4 + 7 = (x - 2)² + 3." },
             { q: "Apakah nilai maksimum bagi f(x) = -(x - 1)² + 8?", options: ["8", "-8", "1", "-1"], answerText: "8", explanation: "Oleh kerana a = -1 (graf maksimum), nilai maksimum ialah nilai k iaitu 8." }
         ];
 
