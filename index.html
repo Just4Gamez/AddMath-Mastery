@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery AddMath: Bab 1 Fungsi (Kuiz Rawak)</title>
+    <title>Mastery AddMath: Bab 2 Fungsi Kuadratik (Kuiz Rawak)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,19 +46,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center space-x-3">
                 <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-500/30">
-                    <i class="fa-solid fa-cube text-white text-xl"></i>
+                    <i class="fa-solid fa-square-root-variable text-white text-xl"></i>
                 </div>
                 <div>
                     <h1 class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">AddMath Mastery</h1>
-                    <p class="text-xs text-purple-400 font-medium">Tingkatan 4 • Bab 1: Fungsi (KSSM)</p>
+                    <p class="text-xs text-purple-400 font-medium">Tingkatan 4 • Bab 2: Fungsi Kuadratik (KSSM)</p>
                 </div>
             </div>
 
             <!-- Navigasi Tab -->
             <nav class="flex flex-wrap gap-1.5 bg-slate-800/80 p-1.5 rounded-2xl border border-slate-700/60 shadow-inner">
                 <button onclick="switchTab('dashboard')" id="btn-dashboard" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30">Dashboard</button>
-                <button onclick="switchTab('visual')" id="btn-visual" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Visual Hubungan</button>
-                <button onclick="switchTab('gubahan')" id="btn-gubahan" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Gubahan & Songsang</button>
+                <button onclick="switchTab('diskriminan')" id="btn-diskriminan" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Jenis Punca & Diskriminan</button>
+                <button onclick="switchTab('verteks')" id="btn-verteks" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50">Bentuk Verteks</button>
                 <button onclick="switchTab('kuiz')" id="btn-kuiz" class="tab-btn px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:text-white hover:bg-slate-700/50"><i class="fa-solid fa-brain mr-1 text-purple-400"></i> Kuiz Dinamik</button>
             </nav>
         </div>
@@ -73,69 +73,93 @@
                 <div class="absolute -right-10 -bottom-10 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
                 <div class="relative z-10 max-w-2xl space-y-4">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                        <i class="fa-solid fa-sparkles"></i> Modul Soalan Rawak Dinamik
+                        <i class="fa-solid fa-sparkles"></i> Modul Soalan Rawak Dinamik Bab 2
                     </span>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Kuasai Konsep <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Fungsi</span> Tanpa Bosan</h2>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">Kuasai Konsep <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Fungsi Kuadratik</span></h2>
                     <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Soalan akan sentiasa bertukar-tukar secara rawak setiap kali anda memulakan sesi kuiz baharu!
+                        Terokai persamaan & ketaksamaan kuadratik, jenis punca melalui pembezalayan (diskriminan), bentuk verteks, nilai maksimum/minimum, serta uji minda dengan kuiz dinamik rawak!
                     </p>
                     <div class="flex flex-wrap gap-3 pt-2">
                         <button onclick="switchTab('kuiz'); startQuiz();" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30 flex items-center gap-2">
-                            Mula Kuiz Rawak <i class="fa-solid fa-arrow-right text-xs"></i>
+                            Mula Kuiz Bab 2 <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- Kad Ringkasan Subtopik -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center font-bold">2.1</div>
+                    <h3 class="font-bold text-white text-lg">Persamaan & Ketaksamaan</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Penyelesaian melalui pemfaktoran, penyempurnaan kuasa dada, rumus kuadratik, serta kaedah graf/garis nombor untuk ketaksamaan kuadratik.</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold">2.2</div>
+                    <h3 class="font-bold text-white text-lg">Jenis Punca (Diskriminan)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Analisis nilai $b^2 - 4ac$ sama ada dua punca nyata berbeza, dua punca nyata sama, atau tiada punca nyata.</p>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-pink-600/20 text-pink-400 flex items-center justify-center font-bold">2.3</div>
+                    <h3 class="font-bold text-white text-lg">Fungsi & Bentuk Verteks</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Bentuk am $f(x)=ax^2+bx+c$ dan bentuk verteks $f(x)=a(x-h)^2+k$ untuk menentukan titik maksimum/minimum serta paksi simetri.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- TAB 2: VISUAL HUBUNGAN -->
-        <section id="tab-visual" class="tab-content space-y-6">
+        <!-- TAB 2: JENIS PUNCA & DISKRIMINAN -->
+        <section id="tab-diskriminan" class="tab-content space-y-6">
             <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700 pb-6">
                     <div>
-                        <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Simulasi Interaktif</span>
-                        <h2 class="text-2xl font-bold text-white mt-1">Eksplorasi Jenis Hubungan & Pemetaan</h2>
+                        <span class="text-xs font-semibold text-purple-400 uppercase tracking-wider">Simulasi Interaktif Subtopik 2.2</span>
+                        <h2 class="text-2xl font-bold text-white mt-1">Pembezalayan & Kedudukan Graf</h2>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <button onclick="updateRelation('satuSatu')" id="rel-btn-1" class="px-4 py-2 rounded-xl text-xs font-semibold bg-purple-600 text-white transition-all shadow-md">Satu kepada Satu</button>
-                        <button onclick="updateRelation('banyakSatu')" id="rel-btn-2" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all">Banyak kepada Satu</button>
-                        <button onclick="updateRelation('satuBanyak')" id="rel-btn-3" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all">Satu kepada Banyak</button>
+                        <button onclick="updateDisc('lebihSifar')" id="disc-btn-1" class="px-4 py-2 rounded-xl text-xs font-semibold bg-purple-600 text-white transition-all shadow-md">b² - 4ac > 0</button>
+                        <button onclick="updateDisc('samaSifar')" id="disc-btn-2" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all">b² - 4ac = 0</button>
+                        <button onclick="updateDisc('kurangSifar')" id="disc-btn-3" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all">b² - 4ac < 0</button>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center bg-slate-900/60 border border-slate-800 rounded-2xl p-6 text-center">
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-3">
-                        <h4 class="font-bold text-purple-300 text-sm">Set A (Domain)</h4>
-                        <div class="flex justify-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-purple-600/25 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">2</span>
-                            <span class="w-10 h-10 rounded-xl bg-purple-600/25 border border-purple-500/40 text-purple-200 font-bold flex items-center justify-center">3</span>
-                        </div>
+                        <h4 class="font-bold text-purple-300 text-sm">Jenis Punca Persamaan</h4>
+                        <p id="disc-roots-type" class="text-xs text-slate-200 font-semibold">Dua punca nyata dan berbeza</p>
                     </div>
                     <div class="space-y-2">
-                        <div id="relation-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Adalah Suatu Fungsi ✅</div>
-                        <h3 id="relation-title" class="text-lg font-bold text-white">Hubungan Satu kepada Satu</h3>
-                        <p id="relation-desc" class="text-xs text-slate-400 px-4">Setiap unsur dalam Domain dipetakan kepada tepat satu unsur unik dalam Kodomain.</p>
+                        <div id="disc-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Bersilang pada 2 Titik ✅</div>
+                        <h3 id="disc-title" class="text-lg font-bold text-white">Pembezalayan Positif ($D > 0$)</h3>
+                        <p id="disc-desc" class="text-xs text-slate-400 px-4">Graf fungsi kuadratik memotong paksi-x pada dua titik yang berlainan.</p>
                     </div>
                     <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-3">
-                        <h4 class="font-bold text-indigo-300 text-sm">Set B (Kodomain)</h4>
-                        <div class="flex justify-center gap-3">
-                            <span class="w-10 h-10 rounded-xl bg-indigo-600/25 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">4</span>
-                            <span class="w-10 h-10 rounded-xl bg-indigo-600/25 border border-indigo-500/40 text-indigo-200 font-bold flex items-center justify-center">6</span>
-                        </div>
+                        <h4 class="font-bold text-indigo-300 text-sm">Rumus Asas</h4>
+                        <p class="text-xs text-indigo-200 font-mono font-bold">$D = b^2 - 4ac$</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 3: GUBAHAN & SONGSANG -->
-        <section id="tab-gubahan" class="tab-content space-y-6">
+        <!-- TAB 3: BENTUK VERTEKS -->
+        <section id="tab-verteks" class="tab-content space-y-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-4">
-                    <h3 class="text-xl font-bold text-white">Fungsi Gubahan fg(x)</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Notasi fg(x) bermaksud f[g(x)]. Selesaikan fungsi dalam kurungan terlebih dahulu.</p>
+                    <h3 class="text-xl font-bold text-white">Bentuk Am vs Bentuk Verteks</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Bentuk Am: <span class="text-purple-400 font-mono font-bold">$f(x) = ax^2 + bx + c$</span><br>
+                        Bentuk Verteks: <span class="text-purple-400 font-mono font-bold">$f(x) = a(x - h)^2 + k$</span>
+                    </p>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Titik verteks bagi bentuk verteks ialah $(h, k)$ dan persamaan paksi simetri ialah $x = h$. Nilai $a$ menentukan bentuk graf sama ada senyum ($a > 0$) atau masam ($a < 0$).
+                    </p>
                 </div>
                 <div class="bg-slate-800/60 border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-4">
-                    <h3 class="text-xl font-bold text-white">Fungsi Songsang f⁻¹(x)</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Hanya wujud untuk hubungan satu kepada satu. Graf bersimetri pada garis y = x.</p>
+                    <h3 class="text-xl font-bold text-white">Penyempurnaan Kuasa Dua</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Untuk menukarkan bentuk am kepada bentuk verteks, pastikan pekali $x^2$ ialah 1, kemudian tambahkan dan tolakkan sebutan $\left(\frac{b}{2}\right)^2$.
+                    </p>
+                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 text-xs font-mono text-purple-300">
+                        $x^2 + bx + c = \left(x + \frac{b}{2}\right)^2 - \left(\frac{b}{2}\right)^2 + c$
+                    </div>
                 </div>
             </div>
         </section>
@@ -144,9 +168,9 @@
         <section id="tab-kuiz" class="tab-content space-y-6">
             <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 shadow-xl">
                 <div>
-                    <span id="quiz-progress-label" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Rawak)</span>
-                    <h2 class="text-2xl font-bold text-white mt-1">Cabaran Kuiz Dinamik</h2>
-                    <p class="text-slate-300 text-sm">Jawab soalan demi soalan. Susunan soalan dan pilihan jawapan akan diayak secara rawak!</p>
+                    <span id="quiz-progress-label" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Rawak Bab 2)</span>
+                    <h2 class="text-2xl font-bold text-white mt-1">Cabaran Kuiz Dinamik Bab 2</h2>
+                    <p class="text-slate-300 text-sm">Jawab soalan demi soalan. Susunan soalan dan pilihan jawapan diayak secara rawak setiap sesi!</p>
                 </div>
                 <button onclick="startQuiz()" class="px-5 py-2.5 rounded-xl bg-white text-purple-900 hover:bg-purple-100 font-bold text-sm transition-all shadow-md flex items-center gap-2">
                     <i class="fa-solid fa-rotate-right"></i> Soalan Baharu
@@ -191,45 +215,57 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function updateRelation(type) {
-            const badge = document.getElementById('relation-badge');
-            const title = document.getElementById('relation-title');
-            const desc = document.getElementById('relation-desc');
-            if (type === 'satuSatu') {
+        function updateDisc(type) {
+            const badge = document.getElementById('disc-badge');
+            const title = document.getElementById('disc-title');
+            const desc = document.getElementById('disc-desc');
+            const rootsType = document.getElementById('disc-roots-type');
+            
+            document.getElementById('disc-btn-1').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all";
+            document.getElementById('disc-btn-2').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all";
+            document.getElementById('disc-btn-3').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-700 text-slate-300 hover:bg-slate-600 transition-all";
+
+            if (type === 'lebihSifar') {
+                document.getElementById('disc-btn-1').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-purple-600 text-white transition-all shadow-md";
                 badge.className = "inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
-                badge.innerHTML = "Adalah Suatu Fungsi ✅";
-                title.innerHTML = "Hubungan Satu kepada Satu";
-                desc.innerHTML = "Setiap unsur dalam Domain dipetakan kepada tepat satu unsur unik dalam Kodomain.";
-            } else if (type === 'banyakSatu') {
+                badge.innerHTML = "Bersilang pada 2 Titik ✅";
+                title.innerHTML = "Pembezalayan Positif (b² - 4ac > 0)";
+                rootsType.innerHTML = "Dua punca nyata dan berbeza";
+                desc.innerHTML = "Graf fungsi kuadratik memotong paksi-x pada dua titik berlainan.";
+            } else if (type === 'samaSifar') {
+                document.getElementById('disc-btn-2').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-purple-600 text-white transition-all shadow-md";
                 badge.className = "inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30";
-                badge.innerHTML = "Adalah Suatu Fungsi ✅";
-                title.innerHTML = "Hubungan Banyak kepada Satu";
-                desc.innerHTML = "Dua atau lebih objek mempunyai imej yang sama dalam Kodomain.";
-            } else if (type === 'satuBanyak') {
+                badge.innerHTML = "Tangen / Sentuh 1 Titik ✅";
+                title.innerHTML = "Pembezalayan Sifar (b² - 4ac = 0)";
+                rootsType.innerHTML = "Dua punca nyata dan sama (punca kembar)";
+                desc.innerHTML = "Graf fungsi kuadratik menyentuh paksi-x pada satu titik sahaja (sebagai tangen).";
+            } else if (type === 'kurangSifar') {
+                document.getElementById('disc-btn-3').className = "px-4 py-2 rounded-xl text-xs font-semibold bg-purple-600 text-white transition-all shadow-md";
                 badge.className = "inline-block px-3 py-1 rounded-full text-xs font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30";
-                badge.innerHTML = "Bukan Suatu Fungsi ❌";
-                title.innerHTML = "Hubungan Satu kepada Banyak";
-                desc.innerHTML = "Satu objek dipetakan kepada dua atau lebih imej bersekali.";
+                badge.innerHTML = "Tidak Bersilang ❌";
+                title.innerHTML = "Pembezalayan Negatif (b² - 4ac < 0)";
+                rootsType.innerHTML = "Tiada punca nyata (punca khayalan)";
+                desc.innerHTML = "Graf fungsi kuadratik tidak memotong atau menyentuh paksi-x sama sekali.";
             }
         }
 
-        // Master Bank Soalan (15 Soalan)
+        // Master Bank Soalan Bab 2 (15 Soalan)
         const masterQuizBank = [
-            { q: "Antara yang berikut, yang manakah mewakili fungsi?", options: ["Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Hubungan satu kepada satu atau banyak kepada satu", "Hubungan songsang mutlak"], answerText: "Hubungan satu kepada satu atau banyak kepada satu", explanation: "Fungsi ialah hubungan khas di mana setiap objek mempunyai hanya satu imej sahaja." },
-            { q: "Diberi fungsi f(x) = 3x - 5, cari nilai imej bagi x = 4.", options: ["7", "12", "17", "2"], answerText: "7", explanation: "f(4) = 3(4) - 5 = 12 - 5 = 7." },
-            { q: "Diberi fungsi f(x) = 2x + 3, cari objek x apabila f(x) = 11.", options: ["4", "5", "7", "3"], answerText: "4", explanation: "2x + 3 = 11 -> 2x = 8 -> x = 4." },
-            { q: "Diberi fungsi g(x) = 4x - 3, cari fungsi songsang g⁻¹(x).", options: ["(x - 3)/4", "(x + 3)/4", "4x + 3", "3x - 4"], answerText: "(x + 3)/4", explanation: "Katakan y = 4x - 3 -> x = (y + 3)/4, maka g⁻¹(x) = (x + 3)/4." },
-            { q: "Diberi f(x) = 2x dan g(x) = x + 3, cari fungsi gubahan fg(x).", options: ["2x + 3", "2x + 6", "x + 6", "2x^2 + 6x"], answerText: "2x + 6", explanation: "fg(x) = f(x + 3) = 2(x + 3) = 2x + 6." },
-            { q: "Apakah garis simetri bagi graf suatu fungsi f(x) dan fungsi songsangnya f⁻¹(x)?", options: ["Paksi-x", "Paksi-y", "Garis y = x", "Garis y = -x"], answerText: "Garis y = x", explanation: "Graf f(x) dan f⁻¹(x) sentiasa bersimetri pada garis y = x." },
-            { q: "Diberi f(x) = 5 - 2x, cari imej bagi x = -3.", options: ["-1", "11", "5", "-6"], answerText: "11", explanation: "f(-3) = 5 - 2(-3) = 5 + 6 = 11." },
-            { q: "Jika f: x → 3x + h dan f(2) = 11, cari nilai pemalar h.", options: ["3", "5", "17", "6"], answerText: "5", explanation: "f(2) = 3(2) + h = 11 -> 6 + h = 11 -> h = 5." },
-            { q: "Diberi fungsi g(x) = x / (x - 2), cari nilai g(4).", options: ["2", "1", "0.5", "Takrif tidak sah"], answerText: "2", explanation: "g(4) = 4 / (4 - 2) = 4 / 2 = 2." },
-            { q: "Diberi fg(x) = 3x + 1 dan g(x) = x - 1, cari fungsi f(x).", options: ["3x - 2", "3x + 1", "3x + 4", "3(x - 1)"], answerText: "3x + 4", explanation: "Katakan u = x - 1 (x = u + 1). f(u) = 3(u + 1) + 1 = 3u + 4." },
-            { q: "Apakah syarat wajib supaya fungsi songsang wujud bagi suatu fungsi?", options: ["Hubungan banyak kepada satu", "Hubungan satu kepada satu", "Domain mesti kosong", "Kodomain bernilai negatif"], answerText: "Hubungan satu kepada satu", explanation: "Fungsi songsang hanya wujud jika hubungan ialah satu kepada satu." },
-            { q: "Diberi f(x) = 3x² - 2, cari nilai bagi f(-2).", options: ["10", "16", "-14", "12"], answerText: "10", explanation: "f(-2) = 3(-2)² - 2 = 3(4) - 2 = 10." },
-            { q: "Diberi h(x) = |3x - 5|, cari nilai h(-1).", options: ["2", "-8", "8", "-2"], answerText: "8", explanation: "h(-1) = |3(-1) - 5| = |-3 - 5| = |-8| = 8." },
-            { q: "Diberi f(x) = 4 / x untuk x ≠ 0, cari f²(x) [iaitu ff(x)].", options: ["x", "16/x", "4/x", "x/4"], answerText: "x", explanation: "ff(x) = f(4/x) = 4 / (4/x) = x." },
-            { q: "Jika fungsi f(x) = mx + c mempunyai f(0) = 3 dan f(2) = 7, cari nilai m dan c.", options: ["m = 2, c = 3", "m = 3, c = 2", "m = 1, c = 3", "m = 2, c = -3"], answerText: "m = 2, c = 3", explanation: "f(0) = c = 3. f(2) = m(2) + 3 = 7 -> 2m = 4 -> m = 2." }
+            { q: "Apakah bentuk am bagi suatu persamaan kuadratik?", options: ["ax + b = 0", "ax^2 + bx + c = 0", "ax^3 + bx^2 + cx + d = 0", "a/x + b = c"], answerText: "ax^2 + bx + c = 0", explanation: "Bentuk am persamaan kuadratik ialah ax^2 + bx + c = 0 dengan keadaan a, b dan c adalah malar dan a ≠ 0." },
+            { q: "Diberi persamaan kuadratik 2x^2 - 8x + 3 = 0, apakah hasil tambah punca (HTP)?", options: ["4", "-4", "3/2", "-3/2"], answerText: "4", explanation: "Bagi ax^2 + bx + c = 0, HTP = -b/a = -(-8)/2 = 4." },
+            { q: "Diberi persamaan kuadratik 3x^2 - 6x + 5 = 0, apakah hasil darab punca (HDP)?", options: ["5/3", "-5/3", "2", "-2"], answerText: "5/3", explanation: "HDP = c/a = 5/3." },
+            { q: "Apakah syarat untuk suatu persamaan kuadratik mempunyai dua punca nyata dan berbeza?", options: ["b^2 - 4ac > 0", "b^2 - 4ac = 0", "b^2 - 4ac < 0", "b^2 - 4ac ≥ 0"], answerText: "b^2 - 4ac > 0", explanation: "Jika diskriminan b^2 - 4ac > 0, persamaan mempunyai dua punca nyata dan berbeza." },
+            { q: "Cari nilai diskriminan bagi persamaan x^2 - 6x + 9 = 0.", options: ["0", "36", "-36", "18"], answerText: "0", explanation: "b^2 - 4ac = (-6)^2 - 4(1)(9) = 36 - 36 = 0." },
+            { q: "Jika persamaan kx^2 - 4x + 1 = 0 mempunyai dua punca yang sama, cari nilai k.", options: ["4", "-4", "2", "-2"], answerText: "4", explanation: "Untuk punca sama, b^2 - 4ac = 0 -> (-4)^2 - 4(k)(1) = 0 -> 16 - 4k = 0 -> k = 4." },
+            { q: "Apakah julat nilai x bagi ketaksamaan kuadratik (x - 2)(x + 3) < 0?", options: ["-3 < x < 2", "x < -3 atau x > 2", "x > 3 atau x < -2", "2 < x < 3"], answerText: "-3 < x < 2", explanation: "Bagi (x - a)(x - b) < 0 di mana a < b, julatnya ialah a < x < b, iaitu -3 < x < 2." },
+            { q: "Tentukan paksi simetri bagi fungsi kuadratik f(x) = 2(x - 3)^2 + 5.", options: ["x = 3", "x = -3", "x = 5", "x = -5"], answerText: "x = 3", explanation: "Dalam bentuk verteks f(x) = a(x - h)^2 + k, persamaan paksi simetri ialah x = h, iaitu x = 3." },
+            { q: "Apakah titik minimum bagi fungsi kuadratik f(x) = (x + 4)^2 - 7?", options: ["(-4, -7)", "(4, -7)", "(-4, 7)", "(4, 7)"], answerText: "(-4, -7)", explanation: "Titik verteks bagi f(x) = a(x - h)^2 + k ialah (h, k). Di sini h = -4 dan k = -7." },
+            { q: "Cari nilai pemalar p jika x = 3 ialah punca bagi persamaan x^2 - px + 6 = 0.", options: ["5", "-5", "3", "-3"], answerText: "5", explanation: "Ganti x = 3: (3)^2 - p(3) + 6 = 0 -> 9 - 3p + 6 = 0 -> 3p = 15 -> p = 5." },
+            { q: "Bentuk suatu persamaan kuadratik yang mempunyai punca 2 dan -5.", options: ["x^2 + 3x - 10 = 0", "x^2 - 3x - 10 = 0", "x^2 + 3x + 10 = 0", "x^2 - 3x + 10 = 0"], answerText: "x^2 + 3x - 10 = 0", explanation: "HTP = 2 + (-5) = -3, HDP = 2(-5) = -10. Rumus: x^2 - (HTP)x + HDP = 0 -> x^2 - (-3)x - 10 = 0 -> x^2 + 3x - 10 = 0." },
+            { q: "Tentukan jenis punca bagi persamaan 2x^2 - 3x + 4 = 0.", options: ["Tiada punca nyata", "Dua punca nyata dan berbeza", "Dua punca nyata dan sama", "Satu punca nyata"], answerText: "Tiada punca nyata", explanation: "b^2 - 4ac = (-3)^2 - 4(2)(4) = 9 - 32 = -23 (< 0). Maka tiada punca nyata." },
+            { q: "Ungkapkan f(x) = x^2 - 4x + 7 dalam bentuk verteks.", options: ["(x - 2)^2 + 3", "(x + 2)^2 + 3", "(x - 2)^2 - 3", "(x - 4)^2 + 7"], answerText: "(x - 2)^2 + 3", explanation: "x^2 - 4x + (-2)^2 - (-2)^2 + 7 = (x - 2)^2 - 4 + 7 = (x - 2)^2 + 3." },
+            { q: "Apakah nilai maksimum bagi f(x) = - (x - 1)^2 + 8?", options: ["8", "-8", "1", "-1"], answerText: "8",explanation: "Kerana a = -1 (< 0), graf mempunyai titik maksimum (1, 8). Nilai maksimum ialah k = 8." },
+            { q: "Jika α dan β adalah punca bagi 2x^2 + 3x - 1 = 0, cari nilai bagi α + β.", options: ["-3/2", "3/2", "-1/2", "1/2"], answerText: "-3/2", explanation: "HTP = -b/a = -3/2." }
         ];
 
         let currentQuizSet = [];
@@ -237,7 +273,6 @@
         let score = 0;
 
         function startQuiz() {
-            // Ambil 10 soalan secara rawak daripada 10 soalan bank setiap kali sesi bermula
             currentQuizSet = [...masterQuizBank].sort(() => 0.5 - Math.random()).slice(0, 10);
             currentQuestionIndex = 0;
             score = 0;
@@ -249,7 +284,7 @@
 
         function loadCurrentQuestion() {
             const qData = currentQuizSet[currentQuestionIndex];
-            document.getElementById('quiz-progress-label').innerText = `Soalan ${currentQuestionIndex + 1} dari 10 (Rawak)`;
+            document.getElementById('quiz-progress-label').innerText = `Soalan ${currentQuestionIndex + 1} dari 10 (Rawak Bab 2)`;
             document.getElementById('question-text').innerText = `${currentQuestionIndex + 1}. ${qData.q}`;
             
             const optionsContainer = document.getElementById('options-container');
@@ -257,7 +292,6 @@
             document.getElementById('explanation-box').classList.add('hidden');
             document.getElementById('next-q-btn').classList.add('hidden');
 
-            // Ayak pilihan jawapan supaya kedudukan pilihan (A, B, C, D) sentiasa rawak
             let shuffledOptions = [...qData.options].sort(() => 0.5 - Math.random());
 
             shuffledOptions.forEach((opt) => {
@@ -283,7 +317,6 @@
                 score++;
             } else {
                 clickedBtn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
-                // Serlahkan jawapan betul
                 allBtns.forEach(b => {
                     if (b.innerText === correctOpt) {
                         b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
