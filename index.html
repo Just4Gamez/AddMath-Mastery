@@ -98,11 +98,6 @@
             <div class="lg:col-span-3 space-y-6">
 
                 <!-- ========================================== -->
-                <!-- TEMPLAT FUNGSI KUİZ DINAMIK (DIGUNAKAN BERSAMA) -->
-                <!-- ========================================== -->
-                <!-- Nota: Struktur kuiz ini dikongsi merentasi bab dengan fungsi navigasi lengkap -->
-                
-                <!-- ========================================== -->
                 <!-- MODUL BAB 1: FUNGSI -->
                 <!-- ========================================== -->
                 <section id="chapter-bab1" class="view-section active space-y-6">
@@ -485,7 +480,7 @@
         </div>
     </main>
 
-    <!-- JavaScript Logika & Navigasi Kuiz Dinamik Lengkap -->
+    <!-- JavaScript Logika & Navigasi -->
     <script>
         function switchChapter(chId) {
             document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
@@ -499,16 +494,25 @@
             if(chId === 'bab3') activeBtnId = 'btn-ch3';
             if(chId === 'bab4') activeBtnId = 'btn-ch4';
             document.getElementById(activeBtnId).className = "ch-btn w-full flex items-center gap-3 px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all bg-purple-600 text-white shadow-md shadow-purple-600/30";
+            
+            // Set tab utama kepada 'dash' secara automatik apabila bertukar bab
+            switchTab(chId, 'dash');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function switchTab(chapter, tabName) {
             const tabs = document.querySelectorAll('.' + chapter + '-tab');
             tabs.forEach(t => t.className = chapter + '-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all text-slate-300 hover:bg-slate-800');
-            document.getElementById(chapter + '-btn-' + tabName).className = chapter + '-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white';
+            const targetBtn = document.getElementById(chapter + '-btn-' + tabName);
+            if(targetBtn) {
+                targetBtn.className = chapter + '-tab px-4 py-2 text-xs sm:text-sm font-semibold rounded-xl transition-all bg-purple-600 text-white';
+            }
 
             document.querySelectorAll('#chapter-' + chapter + ' .tab-content').forEach(c => c.classList.remove('active'));
-            document.getElementById(chapter + '-content-' + tabName).classList.add('active');
+            const targetContent = document.getElementById(chapter + '-content-' + tabName);
+            if(targetContent) {
+                targetContent.classList.add('active');
+            }
 
             if(chapter === 'bab1' && tabName === 'kuiz' && quizSetBab1.length === 0) startQuizBab1();
             if(chapter === 'bab2' && tabName === 'kuiz' && quizSetBab2.length === 0) startQuizBab2();
@@ -527,8 +531,8 @@
 
             if(type === 'lebih') {
                 document.getElementById('d-btn-1').className = "px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-600 text-white";
-                title.innerHTML = "Dua Punca Nyata dan Berbeza (D > 0)";
-                desc.innerHTML = "Graf fungsi kuadratik bersilang dengan paksi-x pada dua titik berlainan.";
+                title.innerHTML = "Dua Punca Nyata dan Berbeza (D > 0)[cite: 45]";
+                desc.innerHTML = "Graf fungsi kuadratik bersilang dengan paksi-x pada dua titik berlainan[cite: 52].";
             } else if(type === 'sama') {
                 document.getElementById('d-btn-2').className = "px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-600 text-white";
                 title.innerHTML = "Dua Punca Nyata dan Sama / Punca Kembar (D = 0)";
@@ -549,7 +553,7 @@
             { q: "Cari fungsi songsang bagi f(x) = 5x - 3.", options: ["(x + 3)/5", "(x - 3)/5", "5x + 3", "(5x + 3)/3"], answerText: "(x + 3)/5", explanation: "Katakan y = 5x - 3 -> 5x = y + 3 -> x = (y + 3)/5, maka f⁻¹(x) = (x + 3)/5." },
             { q: "Apakah syarat wajib kewujudan fungsi songsang?", options: ["Hubungan satu kepada satu", "Hubungan banyak kepada satu", "Hubungan satu kepada banyak", "Domain kosong"], answerText: "Hubungan satu kepada satu", explanation: "Fungsi songsang hanya wujud jika hubungan tersebut adalah satu kepada satu agar setiap imej mempunyai tepat satu objek asal." },
             { q: "Diberi f(x) = 4x / (x - 2), cari f(4).", options: ["8", "4", "2", "16"], answerText: "8", explanation: "Gantikan x = 4: f(4) = 4(4) / (4 - 2) = 16 / 2 = 8." },
-            { q: "Jika f⁻¹(x) = 3x - 2, cari f(4).", options: ["2", "10", "4", "6"], answerText: "2", explanation: "Katakan f(k) = 4, maka f⁻¹(4) = k -> 3(4) - 2 salah, guna konsep f(f⁻¹(x)) = x atau katakan f(k) = 4 -> 3k - 2 = 4 (jika f(x)=3x-2 salah tafsir, semak f⁻¹(k)=4 -> 3k-2=4 -> k=2)." },
+            { q: "Jika f⁻¹(x) = 3x - 2, cari f(4).", options: ["2", "10", "4", "6"], answerText: "2", explanation: "Katakan f(k) = 4, maka f⁻¹(4) = k -> gunakan konsep f(f⁻¹(x)) = x atau f⁻¹(k)=4 -> 3k-2=4 -> k=2." },
             { q: "Diberi f: x → 5 - 2x, cari x jika f(x) = 13.", options: ["-4", "4", "-9", "9"], answerText: "-4", explanation: "5 - 2x = 13 -> -2x = 8 -> x = -4." },
             { q: "Antara berikut, yang manakah fungsi?", options: ["Hubungan satu kepada satu atau banyak kepada satu", "Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Relasi songsang"], answerText: "Hubungan satu kepada satu atau banyak kepada satu", explanation: "Definisi fungsi memerlukan setiap objek mempunyai tepat satu imej sahaja." }
         ];
@@ -559,26 +563,26 @@
             { q: "Apakah bentuk am persamaan kuadratik?", options: ["ax² + bx + c = 0", "ax + b = 0", "ax³ + bx² = 0", "a/x + b = c"], answerText: "ax² + bx + c = 0", explanation: "Bentuk am persamaan kuadratik ialah ax² + bx + c = 0 dengan keadaan a ≠ 0." },
             { q: "Diberi 2x² - 8x + 3 = 0, cari hasil tambah punca (HTP).", options: ["4", "-4", "3/2", "-3/2"], answerText: "4", explanation: "Formula Hasil Tambah Punca (HTP) = -b/a = -(-8)/2 = 4." },
             { q: "Diberi 3x² - 6x + 5 = 0, cari hasil darab punca (HDP).", options: ["5/3", "-5/3", "2", "-2"], answerText: "5/3", explanation: "Formula Hasil Darab Punca (HDP) = c/a = 5/3." },
-            { q: "Apakah syarat dua punca nyata dan berbeza?", options: ["b² - 4ac > 0", "b² - 4ac = 0", "b² - 4ac < 0", "b² - 4ac ≥ 0"], answerText: "b² - 4ac > 0", explanation: "Diskriminan D > 0 menunjukkan graf memotong paksi-x pada dua titik berlainan (dua punca nyata dan berbeza)." },
+            { q: "Apakah syarat dua punca nyata dan berbeza?", options: ["b² - 4ac > 0", "b² - 4ac = 0", "b² - 4ac < 0", "b² - 4ac ≥ 0"], answerText: "b² - 4ac > 0", explanation: "Diskriminan D > 0 menunjukkan graf memotong paksi-x pada dua titik berlainan." },
             { q: "Cari nilai diskriminan bagi x² - 6x + 9 = 0.", options: ["0", "36", "-36", "18"], answerText: "0", explanation: "D = b² - 4ac = (-6)² - 4(1)(9) = 36 - 36 = 0 (punca kembar)." },
             { q: "Jika kx² - 4x + 1 = 0 mempunyai dua punca sama, cari k.", options: ["4", "-4", "2", "-2"], answerText: "4", explanation: "Punca sama bermaksud b² - 4ac = 0 -> (-4)² - 4(k)(1) = 0 -> 16 = 4k -> k = 4." },
             { q: "Tentukan paksi simetri bagi f(x) = 2(x - 3)² + 5.", options: ["x = 3", "x = -3", "x = 5", "x = -5"], answerText: "x = 3", explanation: "Dalam bentuk verteks f(x) = a(x - h)² + k, persamaan paksi simetri ialah x = h." },
             { q: "Apakah titik minimum bagi f(x) = (x + 4)² - 7?", options: ["(-4, -7)", "(4, -7)", "(-4, 7)", "(4, 7)"], answerText: "(-4, -7)", explanation: "Titik verteks bagi bentuk a(x - h)² + k ialah (h, k), maka h = -4 dan k = -7." },
             { q: "Ungkapkan f(x) = x² - 4x + 7 dalam bentuk verteks.", options: ["(x - 2)² + 3", "(x + 2)² + 3", "(x - 2)² - 3", "(x - 4)² + 7"], answerText: "(x - 2)² + 3", explanation: "Melalui kaedah menyempurnakan kuasa dua: x² - 4x + (-2)² - (-2)² + 7 = (x - 2)² - 4 + 7 = (x - 2)² + 3." },
-            { q: "Apakah nilai maksimum bagi f(x) = -(x - 1)² + 8?", options: ["8", "-8", "1", "-1"], answerText: "8", explanation: "Oleh kerana a = -1 (graf bentuk n / maksimum), nilai maksimum ialah nilai k iaitu 8." }
+            { q: "Apakah nilai maksimum bagi f(x) = -(x - 1)² + 8?", options: ["8", "-8", "1", "-1"], answerText: "8", explanation: "Oleh kerana a = -1 (graf maksimum), nilai maksimum ialah nilai k iaitu 8." }
         ];
 
         // Bank Soalan Bab 3
         const bankBab3 = [
-            { q: "Apakah bentuk am bagi persamaan linear dalam tiga pemboleh ubah?", options: ["ax + by + cz = d", "ax² + by + cz = d", "ax + by = c", "ax + by + cz + dw = e"], answerText: "ax + by + cz = d", explanation: "Bentuk am bagi sistem linear 3 pemboleh ubah ialah ax + by + cz = d dengan a, b, c bukan sifar." },
+            { q: "Apakah bentuk am bagi persamaan linear dalam tiga pemboleh ubah?", options: ["ax + by + cz = d", "ax² + by + cz = d", "ax + by = c", "ax + by + cz + dw = e"], answerText: "ax + by + cz = d", explanation: "Bentuk am bagi sistem linear 3 pemboleh ubah ialah ax + by + cz = d." },
             { q: "Berapakah bilangan jenis penyelesaian yang mungkin bagi sistem persamaan linear dalam tiga pemboleh ubah?", options: ["3 jenis", "2 jenis", "1 jenis", "4 jenis"], answerText: "3 jenis", explanation: "Tiga jenis penyelesaian: satu penyelesaian unik, penyelesaian tak terhingga, atau tiada penyelesaian." },
-            { q: "Apakah bentuk geometri bagi satu persamaan linear dalam tiga pemboleh ubah apabila dilukis dalam ruang 3D?", options: ["Satah", "Garis lurus", "Parabola", "Sfera"], answerTest: "Satah", explanation: "Persamaan linear ax + by + cz = d mewakili sebuah satah rata dalam ruang tiga dimensi (3D)." },
+            { q: "Apakah bentuk geometri bagi satu persamaan linear dalam tiga pemboleh ubah apabila dilukis dalam ruang 3D?", options: ["Satah", "Garis lurus", "Parabola", "Sfera"], answerText: "Satah", explanation: "Persamaan linear ax + by + cz = d mewakili sebuah satah rata dalam ruang tiga dimensi (3D)." },
             { q: "Jika tiga satah bersilang pada satu garis lurus sepunya, sistem persamaan tersebut mempunyai...", options: ["Penyelesaian tak terhingga", "Satu penyelesaian unik", "Tiada penyelesaian", "Dua penyelesaian"], answerText: "Penyelesaian tak terhingga", explanation: "Persilangan sepanjang satu garis lurus memberikan titik penyelesaian yang tak terhingga banyaknya." },
             { q: "Antara kaedah berikut, yang manakah boleh digunakan untuk menyelesaikan sistem persamaan linear dalam tiga pemboleh ubah?", options: ["Kaedah penghapusan dan penggantian", "Kaedah pemfaktoran kuadratik sahaja", "Kaedah penyempurnaan kuasa dua sahaja", "Kaedah graf 2D sahaja"], answerText: "Kaedah penghapusan dan penggantian", explanation: "Penghapusan dan penggantian algebra adalah kaedah utama yang digunakan." },
             { q: "Diberi persamaan serentak 2x + y = 4 dan y² - 4x = 0. Berapakah bilangan titik persilangan yang mungkin?", options: ["2 titik", "1 titik", "Tiada titik", "3 titik"], answerText: "2 titik", explanation: "Persamaan linear dan tak linear (kuadratik) lazimnya menghasilkan sehingga 2 titik persilangan." },
             { q: "Apakah yang diwakili oleh penyelesaian bagi persamaan serentak melibatkan satu persamaan linear dan satu persamaan tak linear pada satah?", options: ["Koordinat titik persilangan", "Paksi simetri", "Punca diskriminan", "Domain fungsi"], answerText: "Koordinat titik persilangan", explanation: "Penyelesaian persamaan serentak ialah titik persilangan antara graf garis lurus dan lengkung." },
             { q: "Jika hasil penyelesaian sistem persamaan linear menghasilkan 0 = 12, ini bermaksud...", options: ["Tiada penyelesaian", "Penyelesaian tak terhingga", "x = 0, y = 0, z = 12", "Sistem konsisten"], answerText: "Tiada penyelesaian", explanation: "Pernyataan palsu (kontradiksi) seperti 0 = 12 menunjukkan tiada penyelesaian wujud kerana satah adalah selari." },
-            { q: "Jika hasil penyelesaian sistem persamaan linear menghasilkan 0 = 0, ini bermaksud...", options: ["Penyelesaian tak terhingga", "Tiada penyelesaian", "Satu penyelesaian unik", "Ralat pengiraan"], answerText: "Penyelesaian tak terhingga", explanation: "Pernyataan identiti benar seperti 0 = 0 menunjukkan satah bertindih/bersilang sepanjang garis (tak terhingga)." },
+            { q: "Jika hasil penyelesaian sistem persamaan linear menghasilkan 0 = 0, ini bermaksud...", options: ["Penyelesaian tak terhingga", "Tiada penyelesaian", "Satu penyelesaian unik", "Ralat pengiraan"], answerText: "Penyelesaian tak terhingga", explanation: "Pernyataan identiti benar seperti 0 = 0 menunjukkan satah bertindih/bersilang sepanjang garis." },
             { q: "Kaedah penghapusan dalam sistem tiga pemboleh ubah melibatkan...", options: ["Menghapuskan satu pemboleh ubah secara berperingkat", "Menghapuskan semua pemboleh ubah serentak", "Menukar persamaan kepada bentuk kuadratik", "Mencari nilai diskriminan D"], answerText: "Menghapuskan satu pemboleh ubah secara berperingkat", explanation: "Langkah demi langkah mengurangkan 3 pemboleh ubah kepada 2, kemudian kepada 1 pemboleh ubah." }
         ];
 
@@ -630,29 +634,20 @@
                 container.appendChild(btn);
             });
 
-            if(userAnswersBab1[indexBab1] !== undefined) {
-                showFeedback1(data.answerText, data.explanation);
-            }
-
+            if(userAnswersBab1[indexBab1] !== undefined) showFeedback1(data.answerText, data.explanation);
             document.getElementById('prev-btn-bab1').style.display = indexBab1 > 0 ? 'inline-flex' : 'none';
         }
 
         function checkAns1(sel, cor, exp, btn) {
-            if(userAnswersBab1[indexBab1] !== undefined) return; // Sudah jawab
+            if(userAnswersBab1[indexBab1] !== undefined) return;
             userAnswersBab1[indexBab1] = sel;
-            
             const btns = document.getElementById('options-bab1').querySelectorAll('button');
             btns.forEach(b => {
                 b.disabled = true;
                 if(b.innerText === cor) b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
             });
-
-            if(sel === cor) {
-                btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
-                scoreBab1++;
-            } else {
-                btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
-            }
+            if(sel === cor) { btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium"; scoreBab1++; }
+            else { btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium"; }
             showFeedback1(cor, exp);
         }
 
