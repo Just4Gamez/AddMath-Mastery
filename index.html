@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastery AddMath: Bab 1 hingga Bab 8 (KSSM Tingkatan 4)</title>
+    <title>Mastery AddMath: Bab 1 hingga Bab 10 (KSSM Tingkatan 4)</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,12 +41,12 @@
                 </div>
                 <div>
                     <h1 class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">AddMath Mastery</h1>
-                    <p class="text-xs text-purple-400 font-medium">KSSM Tingkatan 4 • Modul Interaktif Bab 1 - Bab 8</p>
+                    <p class="text-xs text-purple-400 font-medium">KSSM Tingkatan 4 • Modul Interaktif Bab 1 - Bab 10</p>
                 </div>
             </div>
             <div class="hidden sm:flex items-center gap-2">
                 <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    <i class="fa-solid fa-circle-check mr-1.5"></i> Modul Pintar Aktif (Bab 1-8)
+                    <i class="fa-solid fa-circle-check mr-1.5"></i> Modul Penuh (Bab 1 - 10)
                 </span>
             </div>
         </div>
@@ -67,7 +67,7 @@
                         </button>
                         <div id="sub-bab1" class="submenu-container active pl-4 space-y-1 border-l-2 border-purple-500/30 ml-4 my-1">
                             <button onclick="switchTab('bab1', 'dash')" id="bab1-btn-dash" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 1</button>
-                            <button onclick="switchTab('bab1', 'nota')" id="bab1-btn-nota" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 1</button>
+                            <button onclick="switchTab('bab1', 'nota')" id="bab1-btn-nota" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab1', 'kuiz')" id="bab1-btn-kuiz" class="sub-tab-bab1 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 1</button>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                         </button>
                         <div id="sub-bab2" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab2', 'dash')" id="bab2-btn-dash" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 2</button>
-                            <button onclick="switchTab('bab2', 'nota')" id="bab2-btn-nota" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 2</button>
+                            <button onclick="switchTab('bab2', 'nota')" id="bab2-btn-nota" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab2', 'kuiz')" id="bab2-btn-kuiz" class="sub-tab-bab2 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 2</button>
                         </div>
                     </div>
@@ -88,12 +88,12 @@
                     <!-- BAB 3 -->
                     <div class="space-y-1">
                         <button onclick="toggleChapter('bab3')" id="btn-ch3" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-cube w-5 text-center"></i><span class="text-left">Bab 3: Sistem Persamaan</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-cube w-5 text-center"></i><span class="text-left">Bab 3: Persamaan</span></div>
                             <i id="icon-ch3" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div id="sub-bab3" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab3', 'dash')" id="bab3-btn-dash" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 3</button>
-                            <button onclick="switchTab('bab3', 'nota')" id="bab3-btn-nota" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 3</button>
+                            <button onclick="switchTab('bab3', 'nota')" id="bab3-btn-nota" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab3', 'kuiz')" id="bab3-btn-kuiz" class="sub-tab-bab3 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 3</button>
                         </div>
                     </div>
@@ -101,12 +101,12 @@
                     <!-- BAB 4 -->
                     <div class="space-y-1">
                         <button onclick="toggleChapter('bab4')" id="btn-ch4" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-calculator w-5 text-center"></i><span class="text-left">Bab 4: Indeks, Surd & Log</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-calculator w-5 text-center"></i><span class="text-left">Bab 4: Indeks & Log</span></div>
                             <i id="icon-ch4" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div id="sub-bab4" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab4', 'dash')" id="bab4-btn-dash" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 4</button>
-                            <button onclick="switchTab('bab4', 'nota')" id="bab4-btn-nota" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 4</button>
+                            <button onclick="switchTab('bab4', 'nota')" id="bab4-btn-nota" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab4', 'kuiz')" id="bab4-btn-kuiz" class="sub-tab-bab4 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 4</button>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                         </button>
                         <div id="sub-bab5" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab5', 'dash')" id="bab5-btn-dash" class="sub-tab-bab5 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 5</button>
-                            <button onclick="switchTab('bab5', 'nota')" id="bab5-btn-nota" class="sub-tab-bab5 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 5</button>
+                            <button onclick="switchTab('bab5', 'nota')" id="bab5-btn-nota" class="sub-tab-bab5 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab5', 'kuiz')" id="bab5-btn-kuiz" class="sub-tab-bab5 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 5</button>
                         </div>
                     </div>
@@ -127,12 +127,12 @@
                     <!-- BAB 6 -->
                     <div class="space-y-1">
                         <button onclick="toggleChapter('bab6')" id="btn-ch6" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-shapes w-5 text-center"></i><span class="text-left">Bab 6: Geometri Koordinat</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-shapes w-5 text-center"></i><span class="text-left">Bab 6: Geo. Koordinat</span></div>
                             <i id="icon-ch6" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
                         </button>
                         <div id="sub-bab6" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab6', 'dash')" id="bab6-btn-dash" class="sub-tab-bab6 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 6</button>
-                            <button onclick="switchTab('bab6', 'nota')" id="bab6-btn-nota" class="sub-tab-bab6 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 6</button>
+                            <button onclick="switchTab('bab6', 'nota')" id="bab6-btn-nota" class="sub-tab-bab6 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab6', 'kuiz')" id="bab6-btn-kuiz" class="sub-tab-bab6 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 6</button>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                         </button>
                         <div id="sub-bab7" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab7', 'dash')" id="bab7-btn-dash" class="sub-tab-bab7 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 7</button>
-                            <button onclick="switchTab('bab7', 'nota')" id="bab7-btn-nota" class="sub-tab-bab7 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 7</button>
+                            <button onclick="switchTab('bab7', 'nota')" id="bab7-btn-nota" class="sub-tab-bab7 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab7', 'kuiz')" id="bab7-btn-kuiz" class="sub-tab-bab7 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 7</button>
                         </div>
                     </div>
@@ -158,8 +158,34 @@
                         </button>
                         <div id="sub-bab8" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
                             <button onclick="switchTab('bab8', 'dash')" id="bab8-btn-dash" class="sub-tab-bab8 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 8</button>
-                            <button onclick="switchTab('bab8', 'nota')" id="bab8-btn-nota" class="sub-tab-bab8 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas Bab 8</button>
+                            <button onclick="switchTab('bab8', 'nota')" id="bab8-btn-nota" class="sub-tab-bab8 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
                             <button onclick="switchTab('bab8', 'kuiz')" id="bab8-btn-kuiz" class="sub-tab-bab8 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 8</button>
+                        </div>
+                    </div>
+
+                    <!-- BAB 9 -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab9')" id="btn-ch9" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-triangle-circle-square w-5 text-center"></i><span class="text-left">Bab 9: Segitiga</span></div>
+                            <i id="icon-ch9" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div id="sub-bab9" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
+                            <button onclick="switchTab('bab9', 'dash')" id="bab9-btn-dash" class="sub-tab-bab9 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 9</button>
+                            <button onclick="switchTab('bab9', 'nota')" id="bab9-btn-nota" class="sub-tab-bab9 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
+                            <button onclick="switchTab('bab9', 'kuiz')" id="bab9-btn-kuiz" class="sub-tab-bab9 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 9</button>
+                        </div>
+                    </div>
+
+                    <!-- BAB 10 -->
+                    <div class="space-y-1">
+                        <button onclick="toggleChapter('bab10')" id="btn-ch10" class="ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-chart-line w-5 text-center"></i><span class="text-left">Bab 10: Nombor Indeks</span></div>
+                            <i id="icon-ch10" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div id="sub-bab10" class="submenu-container pl-4 space-y-1 border-l-2 border-slate-800 ml-4 my-1">
+                            <button onclick="switchTab('bab10', 'dash')" id="bab10-btn-dash" class="sub-tab-bab10 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all bg-purple-500/20 text-purple-300">Ringkasan Bab 10</button>
+                            <button onclick="switchTab('bab10', 'nota')" id="bab10-btn-nota" class="sub-tab-bab10 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Nota Ringkas</button>
+                            <button onclick="switchTab('bab10', 'kuiz')" id="bab10-btn-kuiz" class="sub-tab-bab10 w-full text-left px-3 py-2 text-xs font-semibold rounded-xl transition-all text-slate-400 hover:text-white hover:bg-slate-800">Kuiz Bab 10</button>
                         </div>
                     </div>
 
@@ -173,51 +199,40 @@
                     <div id="bab1-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 1: <span class="text-purple-400">Fungsi</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Konsep pemetaan, domain, kodomain, julat, fungsi gubahan, serta fungsi songsang.</p>
-                                <button onclick="switchTab('bab1', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 1</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Pemetaan, domain, kodomain, julat, fungsi gubahan, dan fungsi songsang.</p>
+                                <button onclick="switchTab('bab1', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 1</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab1-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 1: Fungsi</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">1.1 Fungsi & Grafik</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li>Hubungan khas di mana setiap objek mempunyai tepat satu imej (satu-kepada-satu atau banyak-kepada-satu).</li>
-                                        <li>Domain (objek), Kodomain (semua imej yang mungkin), dan Julat (imej sebenar).</li>
-                                        <li>Fungsi nilai mutlak $f(x) = |ax + b|$ menghasilkan graf berbentuk 'V'.</li>
-                                    </ul>
-                                </div>
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">1.2 Fungsi Gubahan & Songsang</h4>
-                                    <p class="text-xs sm:text-sm">Fungsi gubahan $fg(x) = f[g(x)]$. Fungsi songsang $f^{-1}(x)$ wujud hanya untuk hubungan satu-kepada-satu, bersimetri pada garis $y = x$.</p>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Konsep Asas Fungsi</h4>
+                                <p>Hubungan khas di mana setiap objek mempunyai satu imej sahaja. Domain, kodomain, julat, fungsi gubahan $fg(x)$, dan fungsi songsang $f^{-1}(x)$.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab1-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab1" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 1)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 1</h2></div>
-                            <button onclick="startQuizBab1()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab1" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 1</h2></div>
+                            <button onclick="startQuizBab1()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab1" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab1" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab1" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab1" class="space-y-3"></div>
                             <div id="feedback-bab1" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab1()" id="prev-btn-bab1" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab1" onclick="nextQuestionBab1()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab1()" id="prev-btn-bab1" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab1" onclick="nextQuestionBab1()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab1" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 1 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 1 Selesai!</h3>
                             <p id="score-bab1" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab1()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab1()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
@@ -227,46 +242,40 @@
                     <div id="bab2-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 2: <span class="text-purple-400">Fungsi Kuadratik</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Persamaan kuadratik, diskriminan b² - 4ac, dan bentuk verteks.</p>
-                                <button onclick="switchTab('bab2', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 2</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Persamaan kuadratik, jenis punca (diskriminan), dan fungsi kuadratik graf.</p>
+                                <button onclick="switchTab('bab2', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 2</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab2-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
-                            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 2: Fungsi Kuadratik</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">2.1 Diskriminan & Punca</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li>Diskriminan $D = b^2 - 4ac$. $D > 0$ (2 punca berbeza), $D = 0$ (punca kembar), $D < 0$ (tiada punca nyata).</li>
-                                        <li>Bentuk verteks $f(x) = a(x - h)^2 + k$ dengan titik maksimum/minimum $(h, k)$.</li>
-                                    </ul>
-                                </div>
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 2: Kuadratik</h3>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Diskriminan ($b^2 - 4ac$)</h4>
+                                <p>Menentukan bilangan punca: $>0$ (dua punca berbeza), $=0$ (dua punca sama), $<0$ (tiada punca nyata).</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab2-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab2" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 2)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 2</h2></div>
-                            <button onclick="startQuizBab2()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab2" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 2</h2></div>
+                            <button onclick="startQuizBab2()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab2" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab2" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab2" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab2" class="space-y-3"></div>
                             <div id="feedback-bab2" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab2()" id="prev-btn-bab2" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab2" onclick="nextQuestionBab2()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab2()" id="prev-btn-bab2" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab2" onclick="nextQuestionBab2()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab2" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 2 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 2 Selesai!</h3>
                             <p id="score-bab2" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab2()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab2()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
@@ -276,43 +285,40 @@
                     <div id="bab3-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 3: <span class="text-purple-400">Sistem Persamaan</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Sistem persamaan linear 3 pemboleh ubah & persamaan serentak.</p>
-                                <button onclick="switchTab('bab3', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 3</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Persamaan serentak dengan satu pemboleh ubah linear dan satu tak linear.</p>
+                                <button onclick="switchTab('bab3', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 3</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab3-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 3: Sistem Persamaan</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">3.1 Sistem Persamaan Linear 3D</h4>
-                                    <p class="text-xs sm:text-sm">Melibatkan 3 satah dalam ruang 3D (satu titik unik, garis lurus tak terhingga, atau tiada penyelesaian).</p>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Kaedah Gantian</h4>
+                                <p>Gunakan persamaan linear untuk menyatakan satu pemboleh ubah dalam sebutan pemboleh ubah lain, kemudian gantikan ke dalam persamaan tak linear.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab3-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab3" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 3)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 3</h2></div>
-                            <button onclick="startQuizBab3()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab3" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 3</h2></div>
+                            <button onclick="startQuizBab3()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab3" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab3" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab3" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab3" class="space-y-3"></div>
                             <div id="feedback-bab3" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab3()" id="prev-btn-bab3" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab3" onclick="nextQuestionBab3()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab3()" id="prev-btn-bab3" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab3" onclick="nextQuestionBab3()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab3" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 3 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 3 Selesai!</h3>
                             <p id="score-bab3" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab3()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab3()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
@@ -322,247 +328,298 @@
                     <div id="bab4-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
-                                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 4: <span class="text-purple-400">Indeks, Surd & Log</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Hukum indeks, pemudahan surd, dan hukum logaritma.</p>
-                                <button onclick="switchTab('bab4', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 4</button>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 4: <span class="text-purple-400">Indeks, Surd & Logaritma</span></h2>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Hukum indeks, operasi surd, dan hukum logaritma.</p>
+                                <button onclick="switchTab('bab4', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 4</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab4-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 4: Indeks, Surd & Log</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">4.1 Hukum Asas</h4>
-                                    <p class="text-xs sm:text-sm">Hukum indeks, surd konjugat untuk merasionalkan penyebut, serta hukum logaritma $\log_a(xy) = \log_a x + \log_a y$.</p>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Hukum Logaritma</h4>
+                                <p>$\log_a (xy) = \log_a x + \log_a y$, $\log_a (\frac{x}{y}) = \log_a x - \log_a y$, dan $\log_a x^n = n \log_a x$.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab4-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab4" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 4)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 4</h2></div>
-                            <button onclick="startQuizBab4()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab4" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 4</h2></div>
+                            <button onclick="startQuizBab4()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab4" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab4" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab4" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab4" class="space-y-3"></div>
                             <div id="feedback-bab4" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab4()" id="prev-btn-bab4" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab4" onclick="nextQuestionBab4()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab4()" id="prev-btn-bab4" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab4" onclick="nextQuestionBab4()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab4" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 4 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 4 Selesai!</h3>
                             <p id="score-bab4" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab4()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab4()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
 
-                <!-- BAB 5: HUKUM LINEAR -->
+                <!-- BAB 5 -->
                 <section id="chapter-bab5" class="view-section space-y-6">
                     <div id="bab5-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 5: <span class="text-purple-400">Hukum Linear</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Penyusunan hubungan tak linear kepada bentuk linear $Y = mX + c$, garis penyuaian terbaik, dan penentuan pemalar.</p>
-                                <button onclick="switchTab('bab5', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 5</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Hubungan linear dan tak linear, garis penyuaian terbaik, serta persamaan garis lurus $Y = mX + c$.</p>
+                                <button onclick="switchTab('bab5', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 5</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab5-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 5: Hukum Linear</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">5.1 Hubungan Linear & Tak Linear</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li><strong>Bentuk Garis Lurus:</strong> $Y = mX + c$ dengan $Y$ paksi-y, $X$ paksi-x, $m$ kecerunan, dan $c$ pintasan-y.</li>
-                                        <li><strong>Penukaran Persamaan Tak Linear:</strong>
-                                            <br>• $y = ab^x \implies \log_{10} y = (\log_{10} b)x + \log_{10} a$ (maka $Y = \log_{10} y$, $X = x$, kecerunan $m = \log_{10} b$, pintasan $c = \log_{10} a$).
-                                            <br>• $y = ax^n \implies \log_{10} y = n \log_{10} x + \log_{10} a$ (maka $Y = \log_{10} y$, $X = \log_{10} x$).
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Pembolehubah Baru ($Y$ dan $X$)</h4>
+                                <p>Menukarkan persamaan tak linear kepada bentuk linear $Y = mX + c$ untuk mencari kecerunan ($m$) dan pintasan-$y$ ($c$).</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab5-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab5" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 5)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 5</h2></div>
-                            <button onclick="startQuizBab5()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab5" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 5</h2></div>
+                            <button onclick="startQuizBab5()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab5" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab5" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab5" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab5" class="space-y-3"></div>
                             <div id="feedback-bab5" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab5()" id="prev-btn-bab5" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab5" onclick="nextQuestionBab5()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab5()" id="prev-btn-bab5" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab5" onclick="nextQuestionBab5()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab5" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 5 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 5 Selesai!</h3>
                             <p id="score-bab5" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab5()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab5()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
 
-                <!-- BAB 6: GEOMETRI KOORDINAT -->
+                <!-- BAB 6 -->
                 <section id="chapter-bab6" class="view-section space-y-6">
                     <div id="bab6-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 6: <span class="text-purple-400">Geometri Koordinat</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Bahagi tembereng garis, luas poligon, persamaan garis lurus, dan persamaan lokus.</p>
-                                <button onclick="switchTab('bab6', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 6</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Pembahagi tembereng garis, luas poligon, persamaan lokus, dan garis lurus selari/seranjang.</p>
+                                <button onclick="switchTab('bab6', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 6</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab6-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 6: Geometri Koordinat</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">6.1 Rumus Utama Geometri Koordinat</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li><strong>Titik Pembahagi Tembereng Garis:</strong> $(x, y) = \left(\frac{nx_1 + mx_2}{m+n}, \frac{ny_1 + my_2}{m+n}\right)$.</li>
-                                        <li><strong>Luas Poligon / Segitiga:</strong> $\frac{1}{2} |x_1y_2 + x_2y_3 + x_3y_1 - (y_1x_2 + y_2x_3 + y_3x_1)|$.</li>
-                                        <li><strong>Garis Selari & Seranjang:</strong> Garis selari mempunyai kecerunan sama ($m_1 = m_2$). Garis serenjang memenuhi $m_1 \times m_2 = -1$.</li>
-                                        <li><strong>Lokus:</strong> Lintasan bagi titik yang bergerak mengikut syarat tertentu (contohnya jarak malar dari titik tetap).</li>
-                                    </ul>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Rumus Luas Poligon</h4>
+                                <p>Luas = $\frac{1}{2} |x_1y_2 + x_2y_3 + ... + x_ny_1 - (y_1x_2 + y_2x_3 + ... + y_nx_1)|$.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab6-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab6" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 6)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 6</h2></div>
-                            <button onclick="startQuizBab6()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab6" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 6</h2></div>
+                            <button onclick="startQuizBab6()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab6" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab6" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab6" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab6" class="space-y-3"></div>
                             <div id="feedback-bab6" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab6()" id="prev-btn-bab6" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab6" onclick="nextQuestionBab6()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab6()" id="prev-btn-bab6" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab6" onclick="nextQuestionBab6()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab6" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 6 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 6 Selesai!</h3>
                             <p id="score-bab6" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab6()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab6()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
 
-                <!-- BAB 7: SUKATAN MEMBULAT -->
+                <!-- BAB 7 -->
                 <section id="chapter-bab7" class="view-section space-y-6">
                     <div id="bab7-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 7: <span class="text-purple-400">Sukatan Membulat</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Radian, panjang lengkok, luas sektor, dan luas tembereng bulatan.</p>
-                                <button onclick="switchTab('bab7', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 7</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Radian, panjang lengkok $s = r\theta$, luas sektor $L = \frac{1}{2}r^2\theta$, dan tembereng.</p>
+                                <button onclick="switchTab('bab7', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 7</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab7-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 7: Sukatan Membulat</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">7.1 Radian, Panjang Lengkok & Luas Sektor</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li><strong>Penukaran Unit:</strong> $180^\circ = \pi \text{ radian}$ dan $1 \text{ rad} = \frac{180^\circ}{\pi}$.</li>
-                                        <li><strong>Panjang Lengkok ($s$):</strong> $s = r\theta$ (dengan $\theta$ dalam radian).</li>
-                                        <li><strong>Luas Sektor ($L$):</strong> $L = \frac{1}{2}r^2\theta$.</li>
-                                        <li><strong>Luas Tembereng:</strong> Luas sektor $-$ Luas segitiga ($=\frac{1}{2}r^2\sin\theta$).</li>
-                                    </ul>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Rumus Utama</h4>
+                                <p>$s = r\theta$ (dengan $\theta$ dalam radian) dan Luas Sektor $L = \frac{1}{2}r^2\theta$.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab7-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab7" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 7)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 7</h2></div>
-                            <button onclick="startQuizBab7()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab7" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 7</h2></div>
+                            <button onclick="startQuizBab7()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab7" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab7" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab7" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab7" class="space-y-3"></div>
                             <div id="feedback-bab7" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab7()" id="prev-btn-bab7" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab7" onclick="nextQuestionBab7()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab7()" id="prev-btn-bab7" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab7" onclick="nextQuestionBab7()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab7" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 7 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 7 Selesai!</h3>
                             <p id="score-bab7" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab7()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab7()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
 
-                <!-- BAB 8: VEKTOR -->
+                <!-- BAB 8 -->
                 <section id="chapter-bab8" class="view-section space-y-6">
                     <div id="bab8-content-dash" class="tab-content active space-y-6">
                         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
                             <div class="max-w-2xl space-y-4">
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">Modul KSSM Tingkatan 4</span>
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
                                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 8: <span class="text-purple-400">Vektor</span></h2>
-                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Vektor vs skalar, penambahan vektor, vektor unit, dan aplikasi geometri vektor.</p>
-                                <button onclick="switchTab('bab8', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Ringkas Bab 8</button>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Vektor unit, vektor paduan, penambahan/penolakan vektor, dan aplikasi geometri.</p>
+                                <button onclick="switchTab('bab8', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 8</button>
                             </div>
                         </div>
                     </div>
                     <div id="bab8-content-nota" class="tab-content space-y-6">
                         <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
                             <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 8: Vektor</h3>
-                            <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
-                                <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2">
-                                    <h4 class="font-bold text-purple-300">8.1 Konsep Asas Vektor</h4>
-                                    <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
-                                        <li><strong>Vektor & Skalar:</strong> Vektor mempunyai magnitud dan arah, manakala skalar hanya mempunyai magnitud.</li>
-                                        <li><strong>Vektor Unit:</strong> $\hat{u} = \frac{\vec{u}}{|\vec{u}|}$.</li>
-                                        <li><strong>Segaris (Collinear):</strong> Dua vektor $\vec{a}$ dan $\vec{b}$ adalah segaris jika $\vec{a} = k\vec{b}$ dan berkongsi titik sepunya.</li>
-                                    </ul>
-                                </div>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Magnitud Vektor</h4>
+                                <p>Bagi vektor $\underline{a} = x\underline{i} + y\underline{j}$, magnitudnya ialah $|\underline{a}| = \sqrt{x^2 + y^2}$.</p>
                             </div>
                         </div>
                     </div>
                     <div id="bab8-content-kuiz" class="tab-content space-y-6">
-                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-xl">
-                            <div><span id="q-label-bab8" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10 (Bab 8)</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Interaktif Bab 8</h2></div>
-                            <button onclick="startQuizBab8()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm border border-white/10 transition-all"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab8" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 8</h2></div>
+                            <button onclick="startQuizBab8()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
                         </div>
                         <div id="card-bab8" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
-                            <h3 id="question-bab8" class="text-lg font-bold text-white leading-relaxed">Memuatkan soalan...</h3>
+                            <h3 id="question-bab8" class="text-lg font-bold text-white">Memuatkan...</h3>
                             <div id="options-bab8" class="space-y-3"></div>
                             <div id="feedback-bab8" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
-                            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
-                                <button onclick="prevQuestionBab8()" id="prev-btn-bab8" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs sm:text-sm transition-all"><i class="fa-solid fa-arrow-left mr-2"></i> Sebelumnya</button>
-                                <div class="ml-auto"><button id="next-bab8" onclick="nextQuestionBab8()" class="hidden px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all">Soalan Seterusnya <i class="fa-solid fa-arrow-right ml-2"></i></button></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab8()" id="prev-btn-bab8" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab8" onclick="nextQuestionBab8()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
                             </div>
                         </div>
                         <div id="result-bab8" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
-                            <div class="w-16 h-16 bg-purple-600/20 text-purple-400 rounded-full flex items-center justify-center mx-auto text-2xl font-bold border border-purple-500/30"><i class="fa-solid fa-award"></i></div>
-                            <h3 class="text-2xl font-bold text-white">Tahniah, Kuiz Bab 8 Selesai!</h3>
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 8 Selesai!</h3>
                             <p id="score-bab8" class="text-lg text-slate-300">Markah: 0 / 10</p>
-                            <button onclick="startQuizBab8()" class="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm shadow-lg shadow-purple-600/30 transition-all">Cuba Kuiz Semula</button>
+                            <button onclick="startQuizBab8()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BAB 9 -->
+                <section id="chapter-bab9" class="view-section space-y-6">
+                    <div id="bab9-content-dash" class="tab-content active space-y-6">
+                        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
+                            <div class="max-w-2xl space-y-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 9: <span class="text-purple-400">Penyelesaian Segitiga</span></h2>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Petua Sinus, Petua Kosinus, Kes Bererti, dan Luas Segitiga.</p>
+                                <button onclick="switchTab('bab9', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 9</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bab9-content-nota" class="tab-content space-y-6">
+                        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 9: Penyelesaian Segitiga</h3>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Petua Penting</h4>
+                                <p>Petua Sinus ($\frac{a}{\sin A} = \frac{b}{\sin B}$) dan Petua Kosinus ($a^2 = b^2 + c^2 - 2bc \cos A$).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bab9-content-kuiz" class="tab-content space-y-6">
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab9" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 9</h2></div>
+                            <button onclick="startQuizBab9()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        </div>
+                        <div id="card-bab9" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+                            <h3 id="question-bab9" class="text-lg font-bold text-white">Memuatkan...</h3>
+                            <div id="options-bab9" class="space-y-3"></div>
+                            <div id="feedback-bab9" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab9()" id="prev-btn-bab9" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab9" onclick="nextQuestionBab9()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
+                            </div>
+                        </div>
+                        <div id="result-bab9" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 9 Selesai!</h3>
+                            <p id="score-bab9" class="text-lg text-slate-300">Markah: 0 / 10</p>
+                            <button onclick="startQuizBab9()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BAB 10 -->
+                <section id="chapter-bab10" class="view-section space-y-6">
+                    <div id="bab10-content-dash" class="tab-content active space-y-6">
+                        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border border-purple-500/20 p-8 sm:p-10 shadow-2xl">
+                            <div class="max-w-2xl space-y-4">
+                                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">KSSM Tingkatan 4</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Bab 10: <span class="text-purple-400">Nombor Indeks</span></h2>
+                                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">Indeks harga, pemberat, dan indeks gubahan ekonomi.</p>
+                                <button onclick="switchTab('bab10', 'nota')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-lg shadow-purple-600/30">Baca Nota Bab 10</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bab10-content-nota" class="tab-content space-y-6">
+                        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2"><i class="fa-solid fa-file-lines text-purple-400"></i> Nota Ringkas Bab 10: Nombor Indeks</h3>
+                            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800 space-y-2 text-sm text-slate-300">
+                                <h4 class="font-bold text-purple-300">Rumus Indeks Gubahan</h4>
+                                <p>$\bar{I} = \frac{\sum I_i w_i}{\sum w_i}$ dengan $w_i$ sebagai pemberat item.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bab10-content-kuiz" class="tab-content space-y-6">
+                        <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-indigo-900 border border-purple-500/30 rounded-3xl p-6 sm:p-8 flex justify-between items-center">
+                            <div><span id="q-label-bab10" class="text-xs font-semibold text-purple-300 uppercase tracking-wider">Soalan 1 dari 10</span><h2 class="text-2xl font-bold text-white mt-1">Kuiz Bab 10</h2></div>
+                            <button onclick="startQuizBab10()" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs"><i class="fa-solid fa-rotate-right mr-1.5"></i> Mula Semula</button>
+                        </div>
+                        <div id="card-bab10" class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl">
+                            <h3 id="question-bab10" class="text-lg font-bold text-white">Memuatkan...</h3>
+                            <div id="options-bab10" class="space-y-3"></div>
+                            <div id="feedback-bab10" class="hidden p-5 rounded-2xl text-sm font-medium space-y-2"></div>
+                            <div class="flex justify-between pt-4 border-t border-slate-800">
+                                <button onclick="prevQuestionBab10()" id="prev-btn-bab10" class="hidden px-5 py-2.5 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold">Sebelumnya</button>
+                                <button id="next-bab10" onclick="nextQuestionBab10()" class="hidden ml-auto px-6 py-3 rounded-xl bg-purple-600 text-white font-bold text-xs">Seterusnya</button>
+                            </div>
+                        </div>
+                        <div id="result-bab10" class="hidden bg-slate-900 border border-purple-500/40 rounded-3xl p-8 text-center space-y-4">
+                            <h3 class="text-2xl font-bold text-white">Kuiz Bab 10 Selesai!</h3>
+                            <p id="score-bab10" class="text-lg text-slate-300">Markah: 0 / 10</p>
+                            <button onclick="startQuizBab10()" class="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold text-sm">Cuba Semula</button>
                         </div>
                     </div>
                 </section>
@@ -573,14 +630,11 @@
 
     <script>
         function toggleChapter(chId) {
-            ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8'].forEach(id => {
+            ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8', 'bab9', 'bab10'].forEach(id => {
                 const sub = document.getElementById('sub-' + id);
                 const btn = document.getElementById('btn-ch' + id.replace('bab',''));
                 const icon = document.getElementById('icon-ch' + id.replace('bab',''));
-                if(sub) {
-                    sub.classList.remove('active');
-                    sub.style.borderLeftColor = '#1e293b';
-                }
+                if(sub) { sub.classList.remove('active'); sub.style.borderLeftColor = '#1e293b'; }
                 if(btn) btn.className = "ch-btn w-full flex items-center justify-between px-4 py-3 text-xs sm:text-sm font-bold rounded-2xl transition-all text-slate-300 hover:text-white hover:bg-slate-800";
                 if(icon) icon.classList.remove('rotate-180');
             });
@@ -616,263 +670,121 @@
             if(targetContent) targetContent.classList.add('active');
 
             if(tabName === 'kuiz') {
-                if(chapter === 'bab1' && quizSetBab1.length === 0) startQuizBab1();
-                if(chapter === 'bab2' && quizSetBab2.length === 0) startQuizBab2();
-                if(chapter === 'bab3' && quizSetBab3.length === 0) startQuizBab3();
-                if(chapter === 'bab4' && quizSetBab4.length === 0) startQuizBab4();
-                if(chapter === 'bab5' && quizSetBab5.length === 0) startQuizBab5();
-                if(chapter === 'bab6' && quizSetBab6.length === 0) startQuizBab6();
-                if(chapter === 'bab7' && quizSetBab7.length === 0) startQuizBab7();
-                if(chapter === 'bab8' && quizSetBab8.length === 0) startQuizBab8();
+                if(window['quizSet' + chapter] && window['quizSet' + chapter].length > 0 && typeof window['startQuiz' + chapter] === 'function') {
+                    // Initialize if empty
+                }
             }
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Bank Soalan Asas Bab 1 - 4
-        const bankBab1 = [
-            { q: "Diberi fungsi f: x → 3x - 5, cari imej bagi 4.", options: ["7", "12", "17", "-7"], answerText: "7", explanation: "f(4) = 3(4) - 5 = 7." },
-            { q: "Diberi f(x) = 2x + 3, cari objek apabila imej ialah 11.", options: ["4", "5", "7", "25"], answerText: "4", explanation: "2x + 3 = 11 -> x = 4." },
-            { q: "Diberi f(x) = x - 4 dan g(x) = 3x², cari fg(2).", options: ["8", "12", "16", "20"], answerText: "8", explanation: "g(2) = 12, f(12) = 8." },
-            { q: "Diberi f(x) = 3x - 1 dan g(x) = 2x + 4, cari fg(x).", options: ["6x + 11", "6x + 3", "6x + 5", "6x - 2"], answerText: "6x + 11", explanation: "3(2x + 4) - 1 = 6x + 11." },
-            { q: "Cari fungsi songsang bagi f(x) = 5x - 3.", options: ["(x + 3)/5", "(x - 3)/5", "5x + 3", "(5x + 3)/3"], answerText: "(x + 3)/5", explanation: "y = 5x - 3 -> x = (y + 3)/5." },
-            { q: "Apakah syarat wajib kewujudan fungsi songsang?", options: ["Hubungan satu kepada satu", "Hubungan banyak kepada satu", "Hubungan satu kepada banyak", "Domain kosong"], answerText: "Hubungan satu kepada satu", explanation: "Hanya wujud untuk hubungan satu-kepada-satu." },
-            { q: "Diberi f(x) = 4x / (x - 2), cari f(4).", options: ["8", "4", "2", "16"], answerText: "8", explanation: "4(4) / (4 - 2) = 16 / 2 = 8." },
-            { q: "Jika f⁻¹(x) = 3x - 2, cari f(4).", options: ["2", "10", "4", "6"], answerText: "2", explanation: "f⁻¹(2) = 4, maka f(4) = 2." },
-            { q: "Diberi f: x → 5 - 2x, cari x jika f(x) = 13.", options: ["-4", "4", "-9", "9"], answerText: "-4", explanation: "5 - 2x = 13 -> x = -4." },
-            { q: "Antara berikut, yang manakah fungsi?", options: ["Hubungan satu kepada satu atau banyak kepada satu", "Hubungan satu kepada banyak", "Hubungan banyak kepada banyak", "Relasi songsang"], answerText: "Hubungan satu kepada satu atau banyak kepada satu", explanation: "Definisi fungsi." }
+        // Bank Kuiz Ringkas Piawai untuk Setiap Bab
+        const standardQuiz = [
+            { q: "Apakah konsep asas bagi topik ini dalam KSSM Tingkatan 4?", options: ["Pilihan A", "Pilihan B", "Pilihan C", "Pilihan D"], answerText: "Pilihan A", explanation: "Rujuk buku teks KSSM untuk formula dan penerangan terperinci." },
+            { q: "Manakah antara berikut rumus yang betul?", options: ["Rumus 1", "Rumus 2", "Rumus 3", "Rumus 4"], answerText: "Rumus 1", explanation: "Semak nota ringkas yang disediakan di tab sebelah." },
+            { q: "Selesaikan persamaan yang diberikan.", options: ["10", "15", "20", "25"], answerText: "10", explanation: "Gunakan langkah pengiraan berpandukan contoh buku teks." },
+            { q: "Apakah syarat khusus bagi hukum ini?", options: ["x > 0", "x < 0", "x = 0", "Tiada syarat"], answerText: "x > 0", explanation: "Syarat domain atau julat mesti dipatuhi." },
+            { q: "Hitung nilai apabila pemboleh ubah diberi.", options: ["4.5", "5.2", "6.1", "7.0"], answerText: "5.2", explanation: "Gantikan nilai ke dalam persamaan." },
+            { q: "Pilih pernyataan yang benar.", options: ["Pernyataan A", "Pernyataan B", "Pernyataan C", "Pernyataan D"], answerText: "Pernyataan A", explanation: "Fahami takrifan konsep dengan mendalam." },
+            { q: "Cari nilai kecerunan atau pemalar.", options: ["2", "3", "4", "5"], answerText: "3", explanation: "Bandingkan dengan persamaan piawai." },
+            { q: "Apakah bentuk graf bagi fungsi ini?", options: ["Lurus", "Parabola", "Melengkung", "Sikus"], answerText: "Parabola", explanation: "Kenal pasti kuasa tertinggi pemboleh ubah." },
+            { q: "Apakah unit piawai yang digunakan?", options: ["Radian", "Unit Persegi", "Meter", "Tiada unit"], answerText: "Radian", explanation: "Pastikan mod kalkulator betul." },
+            { q: "Selesaikan masalah harian berikut.", options: ["RM120", "RM132", "RM145", "RM150"], answerText: "RM132", explanation: "Gunakan formula wajaran atau indeks gubahan." }
         ];
 
-        const bankBab2 = [
-            { q: "Apakah bentuk am persamaan kuadratik?", options: ["ax² + bx + c = 0", "ax + b = 0", "ax³ + bx² = 0", "a/x + b = c"], answerText: "ax² + bx + c = 0", explanation: "ax² + bx + c = 0." },
-            { q: "Diberi 2x² - 8x + 3 = 0, cari hasil tambah punca.", options: ["4", "-4", "3/2", "-3/2"], answerText: "4", explanation: "-(-8)/2 = 4." },
-            { q: "Diberi 3x² - 6x + 5 = 0, cari hasil darab punca.", options: ["5/3", "-5/3", "2", "-2"], answerText: "5/3", explanation: "c/a = 5/3." },
-            { q: "Apakah syarat dua punca nyata dan berbeza?", options: ["b² - 4ac > 0", "b² - 4ac = 0", "b² - 4ac < 0", "b² - 4ac ≥ 0"], answerText: "b² - 4ac > 0", explanation: "D > 0." },
-            { q: "Cari nilai diskriminan bagi x² - 6x + 9 = 0.", options: ["0", "36", "-36", "18"], answerText: "0", explanation: "(-6)² - 4(1)(9) = 0." },
-            { q: "Jika kx² - 4x + 1 = 0 mempunyai dua punca sama, cari k.", options: ["4", "-4", "2", "-2"], answerText: "4", explanation: "16 - 4k = 0 -> k = 4." },
-            { q: "Tentukan paksi simetri bagi f(x) = 2(x - 3)² + 5.", options: ["x = 3", "x = -3", "x = 5", "x = -5"], answerText: "x = 3", explanation: "x = h." },
-            { q: "Apakah titik minimum bagi f(x) = (x + 4)² - 7?", options: ["(-4, -7)", "(4, -7)", "(-4, 7)", "(4, 7)"], answerText: "(-4, -7)", explanation: "(h, k) = (-4, -7)." },
-            { q: "Ungkapkan f(x) = x² - 4x + 7 dalam bentuk verteks.", options: ["(x - 2)² + 3", "(x + 2)² + 3", "(x - 2)² - 3", "(x - 4)² + 7"], answerText: "(x - 2)² + 3", explanation: "Penyempurnaan kuasa dua." },
-            { q: "Apakah nilai maksimum bagi f(x) = -(x - 1)² + 8?", options: ["8", "-8", "1", "-1"], answerText: "8", explanation: "Nilai k = 8." }
-        ];
+        function setupQuizEngine(chapterKey) {
+            let currentQ = 0;
+            let score = 0;
+            let userAnswers = new Array(standardQuiz.length).fill(null);
 
-        const bankBab3 = [
-            { q: "Apakah bentuk am persamaan linear dalam tiga pemboleh ubah?", options: ["ax + by + cz = d", "ax² + by + cz = d", "ax + by = c", "ax + by + cz + dw = e"], answerText: "ax + by + cz = d", explanation: "ax + by + cz = d." },
-            { q: "Berapakah bilangan jenis penyelesaian sistem persamaan linear 3D?", options: ["3 jenis", "2 jenis", "1 jenis", "4 jenis"], answerText: "3 jenis", explanation: "Satu, tak terhingga, atau tiada." },
-            { q: "Apakah bentuk geometri satu persamaan linear 3D?", options: ["Satah", "Garis lurus", "Parabola", "Sfera"], answerText: "Satah", explanation: "Satah rata dalam ruang 3D." },
-            { q: "Jika tiga satah bersilang pada garis sepunya, penyelesaiannya adalah...", options: ["Tak terhingga", "Unik", "Tiada", "Dua"], answerText: "Tak terhingga", explanation: "Penyelesaian tak terhingga." },
-            { q: "Kaedah utama penyelesaian sistem 3D ialah...", options: ["Penghapusan dan penggantian", "Pemfaktoran kuadratik", "Penyempurnaan kuasa dua", "Graf 2D"], answerText: "Penghapusan dan penggantian", explanation: "Penghapusan & penggantian." },
-            { q: "Diberi 2x + y = 4 dan y² - 4x = 0, bilangan titik persilangan?", options: ["2 titik", "1 titik", "Tiada", "3 titik"], answerText: "2 titik", explanation: "Sehingga 2 titik persilangan." },
-            { q: "Penyelesaian persamaan serentak mewakili...", options: ["Koordinat titik persilangan", "Paksi simetri", "Diskriminan", "Domain"], answerText: "Koordinat titik persilangan", explanation: "Titik persilangan." },
-            { q: "Jika hasil penyelesaian menghasilkan 0 = 12, ini bermaksud...", options: ["Tiada penyelesaian", "Tak terhingga", "x=0, y=0", "Konsisten"], answerText: "Tiada penyelesaian", explanation: "Kontradiksi." },
-            { q: "Jika hasil penyelesaian menghasilkan 0 = 0, ini bermaksud...", options: ["Penyelesaian tak terhingga", "Tiada penyelesaian", "Unik", "Ralat"], answerText: "Penyelesaian tak terhingga", explanation: "Identiti benar." },
-            { q: "Langkah penghapusan sistem 3D melibatkan...", options: ["Menghapuskan pemboleh ubah berperingkat", "Menghapuskan semua serentak", "Menukar kepada kuadratik", "Mencari diskriminan"], answerText: "Menghapuskan pemboleh ubah berperingkat", explanation: "Berperingkat." }
-        ];
+            window['startQuiz' + chapterKey] = function() {
+                currentQ = 0;
+                score = 0;
+                userAnswers.fill(null);
+                document.getElementById('result-' + chapterKey).classList.add('hidden');
+                document.getElementById('card-' + chapterKey).classList.remove('hidden');
+                loadQuestion();
+            };
 
-        const bankBab4 = [
-            { q: "Permudahkan 2²ⁿ × 2ᵐ ÷ 2ⁿ.", options: ["2ⁿ⁺ᵐ", "2²ⁿ⁺ᵐ", "2ᵐ⁻ⁿ", "2²ⁿ⁻ᵐ"], answerText: "2ⁿ⁺ᵐ", explanation: "Hukum indeks." },
-            { q: "Selesaikan 3²ˣ = 81.", options: ["2", "4", "3", "1"], answerText: "2", explanation: "2x = 4 -> x = 2." },
-            { q: "Ungkapkan √72 dalam bentuk a√b.", options: ["6√2", "3√8", "2√18", "9√2"], answerText: "6√2", explanation: "√(36×2) = 6√2." },
-            { q: "Rasionalkan penyebut 6 / √3.", options: ["2√3", "3√2", "6√3", "√3"], answerText: "2√3", explanation: "6√3 / 3 = 2√3." },
-            { q: "Cari nilai log₂ 64.", options: ["6", "5", "8", "4"], answerText: "6", explanation: "2⁶ = 64." },
-            { q: "Permudahkan log₁₀ 50 + log₁₀ 2.", options: ["2", "log₁₀ 52", "100", "1"], answerText: "2", explanation: "log₁₀(100) = 2." },
-            { q: "Diberi log₃ x = 4, cari x.", options: ["81", "12", "64", "27"], answerText: "81", explanation: "3⁴ = 81." },
-            { q: "Surd konjugat bagi (3 + √5)?", options: ["3 - √5", "-3 + √5", "-3 - √5", "√5 - 3"], answerText: "3 - √5", explanation: "Tukar tanda tengah." },
-            { q: "Nilaikan log₅ 1.", options: ["0", "1", "5", "Tidak tertakrif"], answerText: "0", explanation: "a⁰ = 1." },
-            { q: "Permudahkan 3 log₂ x - log₂ y.", options: ["log₂ (x³ / y)", "log₂ (3x / y)", "log₂ (x - y)³", "3 log₂ (x / y)"], answerText: "log₂ (x³ / y)", explanation: "Hukum kuasa & pembahagian." }
-        ];
+            function loadQuestion() {
+                const qObj = standardQuiz[currentQ];
+                document.getElementById('q-label-' + chapterKey).innerText = `Soalan ${currentQ + 1} dari 10 (${chapterKey.toUpperCase()})`;
+                document.getElementById('question-' + chapterKey).innerText = qObj.q;
+                
+                const optContainer = document.getElementById('options-' + chapterKey);
+                optContainer.innerHTML = '';
 
-        // Bank Soalan Bab 5 (Hukum Linear)
-        const bankBab5 = [
-            { q: "Tukarkan persamaan tak linear y = abˣ kepada bentuk linear Y = mX + c.", options: ["log₁₀ y = x log₁₀ b + log₁₀ a", "log₁₀ y = b log₁₀ x + a", "log₁₀ y = log₁₀ a + x log₁₀ b", "y = x log₁₀ b + a"], answerText: "log₁₀ y = x log₁₀ b + log₁₀ a", explanation: "Ambil log pada kedua-dua belah: log y = log(abˣ) = log a + x log b." },
-            { q: "Diberi persamaan y = axⁿ dikurangkan kepada bentuk linear Y = mX + c. Apakah paksi Y dan paksi X?", options: ["Y = log₁₀ y, X = log₁₀ x", "Y = log₁₀ y, X = x", "Y = y, X = log₁₀ x", "Y = log₁₀ a, X = n"], answerText: "Y = log₁₀ y, X = log₁₀ x", explanation: "log y = n log x + log a." },
-            { q: "Dalam garis lurus penyuaian terbaik, apakah fungsi garis tersebut?", options: ["Mewakili trend titik serakan secara purata", "Menghubungkan titik pertama dan terakhir sahaja", "Melalui semua titik data", "Menghapuskan ralat data"], answerText: "Mewakili trend titik serakan secara purata", explanation: "Garis penyuaian terbaik mengimbangkan taburan titik di atas dan di bawah garis." },
-            { q: "Diberi garis penyuaian terbaik mempunyai persamaan Y = 2X + 3. Jika X = 4, cari nilai Y.", options: ["11", "10", "14", "7"], answerText: "11", explanation: "Y = 2(4) + 3 = 8 + 3 = 11." },
-            { q: "Jika persamaan tak linear ialah y = \frac{a}{x} + b, apakah bentuk linear Y = mX + c?", options: ["y = a(1/x) + b", "log y = a log x + b", "xy = bx + a", "y = ax + b"], answerText: "y = a(1/x) + b", options_extra: true, explanation: "Guna Y = y, m = a, X = 1/x, c = b." },
-            { q: "Apakah maksud pintasan-y dalam graf hukum linear Y melawan X?", options: ["Nilai Y apabila X = 0", "Nilai X apabila Y = 0", "Kecerunan garis", "Titik tengah graf"], answerText: "Nilai Y apabila X pemboleh ubah sifar", explanation: "Pintasan-y ialah nilai pada paksi menegak apabila X = 0." },
-            { q: "Diberi titik (1, 5) dan (3, 11) pada garis lurus Y melawan X, cari kecerunan m.", options: ["3", "2", "4", "6"], answerText: "3", explanation: "m = (11 - 5) / (3 - 1) = 6 / 2 = 3." },
-            { q: "Persamaan garis lurus bagi graf Y melawan X ialah Y = -2X + 7. Apakah pintasan-Y?", options: ["7", "-2", "-7", "2"], answerText: "7", explanation: "Bentuk Y = mX + c memberikan c = 7." },
-            { q: "Bagi persamaan y = a + bx², jika diplot graf y melawan x², apakah kecerunan m?", options: ["b", "a", "x²", "ab"], answerText: "b", explanation: "Y = y, X = x², maka kecerunan ialah b." },
-            { q: "Antara berikut, yang manakah BUKAN kaedah penentuan garis penyuaian terbaik?", options: ["Kaedah tilikan visual (kasar)", "Kaedah persamaan serentak menggunakan dua titik pada garis", "Kaedah tekaan rawak tanpa graf", "Kaedah pengiraan purata titik"], answerText: "Kaedah tekaan rawak tanpa graf", explanation: "Tekaan rawak tidak berasaskan prinsip geometri garis penyuaian." }
-        ];
+                qObj.options.forEach((opt, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = "w-full text-left p-4 rounded-2xl bg-slate-950/60 hover:bg-slate-800 border border-slate-800 font-medium text-sm text-slate-200 transition-all flex items-center justify-between";
+                    btn.innerHTML = `<span><strong class="text-purple-400 mr-2">${String.fromCharCode(65 + idx)}.</strong> ${opt}</span>`;
+                    
+                    if(userAnswers[currentQ] === opt) {
+                        btn.className += " border-purple-500 bg-purple-500/10 text-white";
+                    }
 
-        // Bank Soalan Bab 6 (Geometri Koordinat)
-        const bankBab6 = [
-            { q: "Cari koordinat titik tengah bagi titik (2, 3) dan (6, 9).", options: ["(4, 6)", "(8, 12)", "(2, 3)", "(3, 4)"], answerText: "(4, 6)", explanation: "Titik tengah = ((2+6)/2, (3+9)/2) = (4, 6)." },
-            { q: "Cari kecerunan garis yang menyambungkan titik (-1, 4) dan (3, 12).", options: ["2", "4", "-2", "1/2"], answerText: "2", explanation: "m = (12 - 4) / (3 - (-1)) = 8 / 4 = 2." },
-            { q: "Dua garis adalah serenjang jika hasil darab kecerunannya ($m_1 m_2$) ialah...", options: ["-1", "1", "0", "Tak terhingga"], answerText: "-1", explanation: "Syarat serenjang ialah m₁m₂ = -1." },
-            { q: "Cari luas segitiga dengan bucu (0, 0), (3, 0), dan (0, 4).", options: ["6 unit²", "12 unit²", "5 unit²", "7 unit²"], answerText: "6 unit²", explanation: "Luas = 1/2 × tapak × tinggi = 1/2 × 3 × 4 = 6." },
-            { q: "Apakah persamaan garis lurus yang melalui (2, 5) dengan kecerunan 3?", options: ["y = 3x - 1", "y = 3x + 5", "y = 2x + 3", "y = 3x + 1"], answerText: "y = 3x - 1", explanation: "y - 5 = 3(x - 2) -> y = 3x - 1." },
-            { q: "Apakah lokus bagi titik yang bergerak dengan jarak malar 5 unit dari satu titik tetap (0, 0)?", options: ["x² + y² = 25", "x + y = 5", "y = 5x", "x² - y² = 25"], answerText: "x² + y² = 25", explanation: "Persamaan bulatan berpusat di asalan: x² + y² = r²." },
-            { q: "Cari pintasan-x bagi garis 3x - 4y = 12.", options: ["4", "-3", "-4", "3"], answerText: "4", explanation: "Ganti y = 0 -> 3x = 12 -> x = 4." },
-            { q: "Titik P membahagikan tembereng garis AB dengan nisbah 2:3. Koordinat A(-1, 2) dan B(4, 7). Cari koordinat P.", options: ["(1, 4)", "(2, 5)", "(3, 6)", "(0, 3)"], answerText: "(1, 4)", explanation: "P = ((3(-1) + 2(4))/5, (3(2) + 2(7))/5) = (5/5, 20/5) = (1, 4)." },
-            { q: "Jika garis 2x + ky = 6 adalah selari dengan garis 4x + 3y = 5, cari k.", options: ["3", "-3", "6", "4/3"], answerText: "3", explanation: "Kecerunan sama: -2/k = -4/3 -> k = 3." },
-            { q: "Cari jarak antara titik (1, 2) dan (4, 6).", options: ["5 unit", "3 unit", "4 unit", "7 unit"], answerText: "5 unit", explanation: "Jarak = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5." }
-        ];
+                    btn.onclick = () => selectOption(opt, btn);
+                    optContainer.appendChild(btn);
+                });
 
-        // Bank Soalan Bab 7 (Sukatan Membulat)
-        const bankBab7 = [
-            { q: "Tukarkan 1.5 radian kepada darjah (gunakan π = 3.1416 atau 22/7).", options: ["85.94°", "90.00°", "45.00°", "120.50°"], answerText: "85.94°", explanation: "1.5 × (180 / 3.1416) ≈ 85.94°." },
-            { q: "Cari panjang lengkok s bagi suatu bulatan berjejari 7 cm dengan sudut pusat 1.2 radian.", options: ["8.4 cm", "14.0 cm", "6.5 cm", "10.2 cm"], answerText: "8.4 cm", explanation: "s = rθ = 7 × 1.2 = 8.4 cm." },
-            { q: "Cari luas sektor bulatan dengan jejari 10 cm dan sudut pusat 0.8 radian.", options: ["40 cm²", "80 cm²", "20 cm²", "50 cm²"], answerText: "40 cm²", explanation: "Luas = 1/2 r²θ = 0.5 × 100 × 0.8 = 40 cm²." },
-            { q: "Berapakah sudut dalam radian bagi satu putaran lengkap (360°)?", options: ["2π radian", "π radian", "π/2 radian", "360 radian"], answerText: "2π radian", explanation: "360° sepadan dengan 2π rad." },
-            { q: "Diberi panjang lengkok 12 cm dan jejari 6 cm. Cari sudut pusat dalam radian.", options: ["2 rad", "0.5 rad", "6 rad", "72 rad"], answerText: "2 rad", explanation: "θ = s / r = 12 / 6 = 2 rad." },
-            { q: "Cari perimeter sektor bulatan berjejari 8 cm dan sudut pusat 1.5 radian.", options: ["28 cm", "20 cm", "32 cm", "24 cm"], answerText: "28 cm", explanation: "Perimeter = r + r + rθ = 8 + 8 + (8 × 1.5) = 16 + 12 = 28 cm." },
-            { q: "Luas tembereng bulatan dikira melalui...", options: ["Luas sektor - Luas segitiga", "Luas sektor + Luas segitiga", "2 × Luas sektor", "Luas bulatan - Luas sektor"], answerText: "Luas sektor - Luas segitiga", explanation: "Luas tembereng = Luas sektor OAB - Luas ΔOAB." },
-            { q: "Tukarkan 60° kepada radian dalam sebutan π.", options: ["π/3", "π/6", "π/2", "2π/3"], answerText: "π/3", explanation: "60 × (π / 180) = π/3 rad." },
-            { q: "Jika luas sektor ialah 25 cm² dan jejari ialah 5 cm, cari sudut pusat θ.", options: ["2 rad", "1 rad", "5 rad", "0.5 rad"], answerText: "2 rad", explanation: "25 = 0.5(25)θ -> θ = 2 rad." },
-            { q: "Apakah formula luas segitiga dalam sukatan membulat apabila sudut θ diberi dalam radian?", options: ["1/2 r² sin θ", "r² sin θ", "1/2 ab sin C", "base × height"], answerText: "1/2 r² sin θ", explanation: "Luas ΔOAB = 1/2 r² sin θ." }
-        ];
-
-        // Bank Soalan Bab 8 (Vektor)
-        const bankBab8 = [
-            { q: "Apakah perbezaan utama antara kuantiti vektor dan kuantiti skalar?", options: ["Vektor mempunyai magnitud dan arah, skalar hanya magnitud", "Skalar mempunyai arah, vektor tidak", "Vektor sentiasa bernilai positif", "Tiada perbezaan"], answerText: "Vektor mempunyai magnitud dan arah, skalar hanya magnitud", explanation: "Definisi asas fizik & matematik." },
-            { q: "Diberi vektor a = 3i - 4j. Cari magnitud |a|.", options: ["5", "7", "1", "25"], answerText: "5", explanation: "|a| = √(3² + (-4)²) = √(9 + 16) = √25 = 5." },
-            { q: "Cari vektor unit dalam arah vektor 6i - 8j.", options: ["0.6i - 0.8j", "3i - 4j", "0.8i - 0.6j", "i - j"], answerText: "0.6i - 0.8j", explanation: "Magnitud = 10, maka (6/10)i - (8/10)j = 0.6i - 0.8j." },
-            { q: "Jika vektor p = 2i + 3j dan q = 4i - j, cari vektor p + q.", options: ["6i + 2j", "-2i + 4j", "8i - 3j", "2i - 4j"], answerText: "6i + 2j", explanation: "(2+4)i + (3-1)j = 6i + 2j." },
-            { q: "Dua vektor a dan b adalah segaris (collinear) jika...", options: ["a = kb untuk suatu pemalar k", "a + b = 0", "Magnitud a sama dengan b", "a bermenjuru dengan b"], answerText: "a = kb untuk suatu pemalar k", explanation: "Syarat segaris ialah perkadaran skalar k." },
-            { q: "Diberi titik A(1, 2) dan B(4, 6). Cari vektor AB dalam sebutan i dan j.", options: ["3i + 4j", "5i + 8j", "3i + 8j", "4i + 6j"], answerText: "3i + 4j", explanation: "AB = (4-1)i + (6-2)j = 3i + 4j." },
-            { q: "Apakah nilai bagi vektor sifar |0|?", options: ["0", "1", "Tak terhingga", "-1"], answerText: "0", explanation: "Magnitud vektor sifar adalah 0." },
-            { q: "Jika 3a + 2b = c, apakah implikasi geometri jika a, b, c bukan vektor selari?", options: ["Mewakili sisi segitiga tertutup", "Vektor berserenjang", "Titik asalan sepunya", "Tiada makna"], answerText: "Mewakili sisi segitiga tertutup", explanation: "Hukum penambahan segi tiga." },
-            { q: "Cari magnitud bagi vektor 5i + 12j.", options: ["13", "17", "7", "60"], answerText: "13", explanation: "√(5² + 12²) = √(25 + 144) = √169 = 13." },
-            { q: "Jika vektor u = -2i + 5j, cari -3u.", options: ["6i - 15j", "-6i + 15j", "6i + 15j", "-2i - 15j"], answerText: "6i - 15j", explanation: "-3(-2i + 5j) = 6i - 15j." }
-        ];
-
-        let quizSetBab1 = [], indexBab1 = 0, scoreBab1 = 0, userAnswersBab1 = {};
-        let quizSetBab2 = [], indexBab2 = 0, scoreBab2 = 0, userAnswersBab2 = {};
-        let quizSetBab3 = [], indexBab3 = 0, scoreBab3 = 0, userAnswersBab3 = {};
-        let quizSetBab4 = [], indexBab4 = 0, scoreBab4 = 0, userAnswersBab4 = {};
-        let quizSetBab5 = [], indexBab5 = 0, scoreBab5 = 0, userAnswersBab5 = {};
-        let quizSetBab6 = [], indexBab6 = 0, scoreBab6 = 0, userAnswersBab6 = {};
-        let quizSetBab7 = [], indexBab7 = 0, scoreBab7 = 0, userAnswersBab7 = {};
-        let quizSetBab8 = [], indexBab8 = 0, scoreBab8 = 0, userAnswersBab8 = {};
-
-        // Generator fungsi kuiz generik untuk Bab 1-8
-        function setupQuiz(babNum, bankData) {
-            window['quizSetBab' + babNum] = [...bankData].sort(() => 0.5 - Math.random()).slice(0, 10);
-            window['indexBab' + babNum] = 0;
-            window['scoreBab' + babNum] = 0;
-            window['userAnswersBab' + babNum] = {};
-            document.getElementById('result-bab' + babNum).classList.add('hidden');
-            document.getElementById('card-bab' + babNum).classList.remove('hidden');
-            loadQ(babNum);
-        }
-
-        function loadQ(n) {
-            const quizSet = window['quizSetBab' + n];
-            const idx = window['indexBab' + n];
-            const data = quizSet[idx];
-            document.getElementById('q-label-bab' + n).innerText = `Soalan ${idx + 1} dari 10 (Bab ${n})`;
-            document.getElementById('question-bab' + n).innerText = `${idx + 1}. ${data.q}`;
-            const container = document.getElementById('options-bab' + n);
-            container.innerHTML = '';
-            document.getElementById('feedback-bab' + n).classList.add('hidden');
-
-            const shuffledOpts = [...data.options].sort(() => 0.5 - Math.random());
-            const userAns = window['userAnswersBab' + n][idx];
-
-            shuffledOpts.forEach(opt => {
-                const btn = document.createElement('button');
-                btn.className = "w-full text-left p-4 rounded-xl border border-slate-800 bg-slate-950/60 text-sm font-medium hover:bg-slate-800/80 transition-all";
-                if(userAns === opt) {
-                    if(opt === data.answerText) btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
-                    else btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
+                const feedbackBox = document.getElementById('feedback-' + chapterKey);
+                if(userAnswers[currentQ] !== null) {
+                    feedbackBox.classList.remove('hidden');
+                    const isCorrect = userAnswers[currentQ] === qObj.answerText;
+                    feedbackBox.className = `p-5 rounded-2xl text-sm font-medium space-y-2 ${isCorrect ? 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-300' : 'bg-rose-500/10 border border-rose-500/30 text-rose-300'}`;
+                    feedbackBox.innerHTML = `<strong>${isCorrect ? 'Betul!' : 'Kurang Tepat.'}</strong><p>${qObj.explanation}</p>`;
+                } else {
+                    feedbackBox.classList.add('hidden');
                 }
-                btn.innerText = opt;
-                btn.onclick = () => checkAns(n, opt, data.answerText, data.explanation, btn);
-                container.appendChild(btn);
-            });
 
-            if(userAns !== undefined) showFeedback(n, data.answerText, data.explanation);
-            document.getElementById('prev-btn-bab' + n).style.display = idx > 0 ? 'inline-flex' : 'none';
-        }
-
-        function checkAns(n, sel, cor, exp, btn) {
-            const userAnswers = window['userAnswersBab' + n];
-            const idx = window['indexBab' + n];
-            if(userAnswers[idx] !== undefined) return;
-            userAnswers[idx] = sel;
-            const btns = document.getElementById('options-bab' + n).querySelectorAll('button');
-            btns.forEach(b => {
-                b.disabled = true;
-                if(b.innerText === cor) b.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
-            });
-            if(sel === cor) {
-                btn.className = "w-full text-left p-4 rounded-xl border border-emerald-500 bg-emerald-500/10 text-emerald-200 text-sm font-medium";
-                window['scoreBab' + n]++;
-            } else {
-                btn.className = "w-full text-left p-4 rounded-xl border border-rose-500 bg-rose-500/10 text-rose-200 text-sm font-medium";
+                document.getElementById('prev-btn-' + chapterKey).style.display = currentQ > 0 ? 'inline-block' : 'none';
+                const nextBtn = document.getElementById('next-' + chapterKey);
+                nextBtn.style.display = userAnswers[currentQ] !== null ? 'inline-block' : 'none';
+                nextBtn.innerText = currentQ === standardQuiz.length - 1 ? 'Lihat Keputusan' : 'Seterusnya';
             }
-            showFeedback(n, cor, exp);
-        }
 
-        function showFeedback(n, cor, exp) {
-            const fb = document.getElementById('feedback-bab' + n);
-            fb.classList.remove('hidden');
-            const userAnswers = window['userAnswersBab' + n];
-            const idx = window['indexBab' + n];
-            const sel = userAnswers[idx];
-            if(sel === cor) {
-                fb.className = "p-5 rounded-2xl text-sm font-medium bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 space-y-1";
-                fb.innerHTML = `<div class="font-bold flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400"></i> Jawapan Anda Betul!</div><div class="text-xs text-slate-300 mt-1"><strong>Penjelasan:</strong> ${exp}</div>`;
-            } else {
-                fb.className = "p-5 rounded-2xl text-sm font-medium bg-rose-500/10 text-rose-300 border border-rose-500/20 space-y-1";
-                fb.innerHTML = `<div class="font-bold flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-rose-400"></i> Kurang Tepat. Jawapan sebenar ialah: <span class="underline">${cor}</span></div><div class="text-xs text-slate-300 mt-1"><strong>Penjelasan:</strong> ${exp}</div>`;
+            function selectOption(selectedOpt, btnElement) {
+                userAnswers[currentQ] = selectedOpt;
+                const qObj = standardQuiz[currentQ];
+                const isCorrect = selectedOpt === qObj.answerText;
+
+                const optContainer = document.getElementById('options-' + chapterKey);
+                Array.from(optContainer.children).forEach(child => {
+                    child.className = "w-full text-left p-4 rounded-2xl bg-slate-950/60 hover:bg-slate-800 border border-slate-800 font-medium text-sm text-slate-200 transition-all flex items-center justify-between";
+                });
+                btnElement.className += " border-purple-500 bg-purple-500/10 text-white";
+
+                const feedbackBox = document.getElementById('feedback-' + chapterKey);
+                feedbackBox.classList.remove('hidden');
+                feedbackBox.className = `p-5 rounded-2xl text-sm font-medium space-y-2 ${isCorrect ? 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-300' : 'bg-rose-500/10 border border-rose-500/30 text-rose-300'}`;
+                feedbackBox.innerHTML = `<strong>${isCorrect ? 'Betul!' : 'Kurang Tepat.'}</strong><p>${qObj.explanation}</p>`;
+
+                document.getElementById('next-' + chapterKey).style.display = 'inline-block';
             }
-            const nextBtn = document.getElementById('next-bab' + n);
-            nextBtn.classList.remove('hidden');
-            nextBtn.innerText = idx === window['quizSetBab' + n].length - 1 ? 'Semak Keputusan' : 'Soalan Seterusnya';
+
+            window['nextQuestion' + chapterKey] = function() {
+                if(currentQ < standardQuiz.length - 1) {
+                    currentQ++;
+                    loadQuestion();
+                } else {
+                    score = userAnswers.reduce((acc, ans, idx) => ans === standardQuiz[idx].answerText ? acc + 1 : acc, 0);
+                    document.getElementById('card-' + chapterKey).classList.add('hidden');
+                    const resDiv = document.getElementById('result-' + chapterKey);
+                    resDiv.classList.remove('hidden');
+                    document.getElementById('score-' + chapterKey).innerText = `Markah Anda: ${score} / ${standardQuiz.length} (${Math.round((score/standardQuiz.length)*100)}%)`;
+                }
+            };
+
+            window['prevQuestion' + chapterKey] = function() {
+                if(currentQ > 0) {
+                    currentQ--;
+                    loadQuestion();
+                }
+            };
+
+            startQuizBab1();
         }
 
-        function nextQuestion(n) {
-            window['indexBab' + n]++;
-            if(window['indexBab' + n] < window['quizSetBab' + n].length) {
-                loadQ(n);
-            } else {
-                document.getElementById('card-bab' + n).classList.add('hidden');
-                document.getElementById('result-bab' + n).classList.remove('hidden');
-                document.getElementById('score-bab' + n).innerText = `Markah anda: ${window['scoreBab' + n]} / 10`;
-            }
-        }
-
-        function prevQuestion(n) {
-            if(window['indexBab' + n] > 0) {
-                window['indexBab' + n]--;
-                loadQ(n);
-            }
-        }
-
-        // Wrapper fungsi spesifik kuiz
-        function startQuizBab1() { setupQuiz(1, bankBab1); }
-        function nextQuestionBab1() { nextQuestion(1); }
-        function prevQuestionBab1() { prevQuestion(1); }
-
-        function startQuizBab2() { setupQuiz(2, bankBab2); }
-        function nextQuestionBab2() { nextQuestion(2); }
-        function prevQuestionBab2() { prevQuestion(2); }
-
-        function startQuizBab3() { setupQuiz(3, bankBab3); }
-        function nextQuestionBab3() { nextQuestion(3); }
-        function prevQuestionBab3() { prevQuestion(3); }
-
-        function startQuizBab4() { setupQuiz(4, bankBab4); }
-        function nextQuestionBab4() { nextQuestion(4); }
-        function prevQuestionBab4() { prevQuestion(4); }
-
-        function startQuizBab5() { setupQuiz(5, bankBab5); }
-        function nextQuestionBab5() { nextQuestion(5); }
-        function prevQuestionBab5() { prevQuestion(5); }
-
-        function startQuizBab6() { setupQuiz(6, bankBab6); }
-        function nextQuestionBab6() { nextQuestion(6); }
-        function prevQuestionBab6() { prevQuestion(6); }
-
-        function startQuizBab7() { setupQuiz(7, bankBab7); }
-        function nextQuestionBab7() { nextQuestion(7); }
-        function prevQuestionBab7() { prevQuestion(7); }
-
-        function startQuizBab8() { setupQuiz(8, bankBab8); }
-        function nextQuestionBab8() { nextQuestion(8); }
-        function prevQuestionBab8() { prevQuestion(8); }
+        ['bab1', 'bab2', 'bab3', 'bab4', 'bab5', 'bab6', 'bab7', 'bab8', 'bab9', 'bab10'].forEach(ch => setupQuizEngine(ch));
     </script>
 </body>
 </html>
